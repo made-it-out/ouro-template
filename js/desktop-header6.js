@@ -119,7 +119,7 @@ window.addEventListener('resize', () => {
 })
 
 // Fullscreen Menu
-desktopHeader1FullscreenMenuOpenBtn.addEventListener('click', () => {
+desktopHeader6FullscreenMenuOpenBtn.addEventListener('click', () => {
     fullscreenMenuD.classList.add('open');
     document.body.classList.add('modal-open');
 })

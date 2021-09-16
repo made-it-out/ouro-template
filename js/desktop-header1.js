@@ -1,5 +1,5 @@
 let desktopHeader1 = document.querySelector('.desktop-header1');
-let desktopHeader1Logo = desktopHeader1.querySelector('.desktop-header1__logo');
+let desktopHeader1Logo = desktopHeader1.querySelector('.desktop-header1__logo-container');
 let desktopHeader1Searchbar = desktopHeader1.querySelector('.desktop-header1__searchbar');
 let desktopHeader1SearchInput = desktopHeader1Searchbar.querySelector('input');
 let desktopHeader1SearchIcon = desktopHeader1Searchbar.querySelector('.search-icon');
@@ -65,7 +65,6 @@ window.addEventListener('resize', () => {
     if (isNaN(linksWidth)) {
         desktopHeader1Links.classList.add('show');
         var linksWidth = parseInt(window.getComputedStyle(desktopHeader1Links).getPropertyValue('width'));
-        console.log(linksWidth);
     }
     if (desktopHeader1SearchAndIcons.getBoundingClientRect().left - desktopHeader1Logo.getBoundingClientRect().right <= (linksWidth + fontSize * 2)) {
         desktopHeader1.classList.add('collapsed');

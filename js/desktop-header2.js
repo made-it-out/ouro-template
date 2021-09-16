@@ -1,5 +1,5 @@
 let desktopHeader2 = document.querySelector('.desktop-header2');
-let desktopHeader2Logo = document.querySelector('.desktop-header2__logo');
+let desktopHeader2Logo = document.querySelector('.desktop-header2__logo-container');
 let desktopHeader2Searchbar = document.querySelector('.desktop-header2__searchbar');
 let desktopHeader2SearchInput = desktopHeader2Searchbar.querySelector('input');
 let desktopHeader2SearchIcon = desktopHeader2Searchbar.querySelector('.search-icon');
