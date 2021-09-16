@@ -1,0 +1,41 @@
+.collection {
+  background-color: var(--clr-white);
+}
+.collection__banner {
+  padding: 1rem;
+  background-color: var(--clr-x-light-grey);
+}
+@media only screen and (min-width: 768px) {
+  .collection__banner {
+    padding: 2rem 5rem;
+  }
+}
+.collection__info {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .collection__info {
+    padding: 2rem 2rem 2rem 0;
+  }
+}
+.collection__name {
+  letter-spacing: 0.06rem;
+  color: var(--clr-black);
+}
+.collection__description {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--clr-black);
+}
+.collection__img-container {
+  height: 200px;
+}
+.collection__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}

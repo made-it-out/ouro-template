@@ -1,0 +1,104 @@
+.contact-form {
+  width: 100%;
+  background-color: var(--clr-white);
+}
+.contact-form__container {
+  margin: auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.contact-form__heading {
+  font-size: 1.8rem;
+  color: var(--clr-black);
+}
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+.contact-form__textarea {
+  height: 200px;
+}
+.contact-form__submit-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 300ms ease-in-out;
+  text-decoration: none;
+}
+.contact-form__submit-btn .fa-chevron-left,
+.contact-form__submit-btn .fa-chevron-right {
+  display: none;
+  transition: left 300ms ease-in-out, right 300ms ease-in-out;
+}
+.contact-form__submit-btn--color-swap {
+  padding: 1em 1.7em;
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-black);
+}
+.contact-form__submit-btn--color-swap:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
+  border-color: var(--clr-accent);
+}
+.contact-form__submit-btn--grow {
+  padding: 1em 1.7em;
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
+}
+.contact-form__submit-btn--grow:hover {
+  transform: scale(1.05);
+}
+.contact-form__submit-btn--underline {
+  color: var(--clr-black);
+}
+.contact-form__submit-btn--underline span {
+  border-bottom: 1px solid var(--clr-black);
+}
+.contact-form__submit-btn--underline:hover {
+  color: var(--clr-accent);
+}
+.contact-form__submit-btn--underline:hover span {
+  border-bottom: 1px solid var(--clr-accent);
+}
+.contact-form__submit-btn--opacity-decrease {
+  padding: 1em 1.7em;
+  color: var(--clr-white);
+  background-color: var(--clr-accent);
+  transition: all 100ms ease-in-out;
+}
+.contact-form__submit-btn--opacity-decrease:hover {
+  opacity: 0.7;
+}
+.contact-form__submit-btn--left-arrow .fa-chevron-left {
+  display: inline-block;
+  position: relative;
+  left: 0;
+  font-size: 1rem !important;
+}
+.contact-form__submit-btn--left-arrow:hover .fa-chevron-left {
+  left: -1rem;
+}
+.contact-form__submit-btn--right-arrow .fa-chevron-right {
+  display: inline-block;
+  position: relative;
+  right: 0;
+  font-size: 1rem !important;
+}
+.contact-form__submit-btn--right-arrow:hover .fa-chevron-right {
+  right: -1rem;
+}

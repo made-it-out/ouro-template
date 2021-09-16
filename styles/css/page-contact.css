@@ -1,0 +1,30 @@
+.contact {
+  padding: 4rem 0;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.contact__info-header {
+  font-size: 1.8rem;
+}
+.contact__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact__info-list-item {
+  display: flex;
+  gap: 0.5rem;
+}
+.contact__info-list-item i {
+  color: var(--clr-accent);
+}
+.contact-form__container {
+  padding: 0;
+}
+.contact .text-field {
+  width: 100%;
+}
