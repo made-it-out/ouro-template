@@ -1,5 +1,5 @@
 .account {
-  padding-top: 2rem;
+  padding: 2rem 0;
   background-color: var(--clr-white);
 }
 .account__title {
