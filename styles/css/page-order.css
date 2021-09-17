@@ -81,6 +81,7 @@
 .order__number {
   letter-spacing: 1px;
   color: var(--clr-black);
+  margin-bottom: 1rem;
 }
 .order__date {
   margin: 1rem 0;
