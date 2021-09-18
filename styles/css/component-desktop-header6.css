@@ -41,6 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
   gap: 2rem;
 }
 .desktop-header6__top::after {
@@ -62,7 +63,7 @@
   display: flex !important;
 }
 .desktop-header6__logo-container {
-  max-width: 225px;
+  max-width: 150px;
   position: relative;
   top: 0;
 }
@@ -184,8 +185,6 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   right: 0;
 }
 .desktop-header6__icons i {

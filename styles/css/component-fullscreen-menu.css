@@ -6,7 +6,7 @@
   left: 0;
   z-index: 3;
   color: var(--clr-black);
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 4rem 2rem;
   background-color: var(--clr-white);
   height: 100vh;
   width: 100vw;
@@ -24,10 +24,11 @@
 .fullscreen-menu__top {
   display: flex;
   justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .fullscreen-menu__logo-container {
-  width: 225px;
+  max-width: 150px;
   position: relative;
   top: 0;
 }
@@ -56,6 +57,9 @@
   transition: all 300ms ease-in-out;
 }
 .fullscreen-menu__close-btn {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
   cursor: pointer;
   transition: color 300ms ease-in-out;
 }
@@ -102,7 +106,7 @@
   display: none;
 }
 .fullscreen-menu__main-link {
-  padding: 1rem 2rem;
+  padding: 1rem 3rem 1rem 2rem;
   transition: all 300ms ease-in-out;
 }
 .fullscreen-menu__sub-menu {

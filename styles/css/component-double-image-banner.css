@@ -3,6 +3,14 @@
   height: 100vh;
   position: relative;
 }
+@media only screen and (max-width: 960px) {
+  .double-image-banner--collapse .double-image-banner__collection1,
+.double-image-banner--collapse .double-image-banner__collection2 {
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+}
 .double-image-banner__collection1, .double-image-banner__collection2 {
   width: 50%;
   position: absolute;

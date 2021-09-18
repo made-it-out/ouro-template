@@ -31,10 +31,9 @@
   list-style: none;
 }
 .desktop-header1__logo-container {
-  max-width: 225px;
+  max-width: 150px;
   position: absolute;
   left: 2rem;
-  top: 0;
 }
 .desktop-header1__logo-container:hover .desktop-header1__logo--primary {
   opacity: 0;

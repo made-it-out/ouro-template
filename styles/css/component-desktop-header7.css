@@ -49,9 +49,9 @@
   display: flex !important;
 }
 .desktop-header7__logo-container {
-  max-width: 225px;
+  max-width: 150px;
   position: relative;
-  top: 0;
+  top: 1rem;
 }
 .desktop-header7__logo-container:hover .desktop-header7__logo--primary {
   opacity: 0;
