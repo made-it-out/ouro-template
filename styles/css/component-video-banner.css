@@ -55,7 +55,7 @@
 .video-banner__title {
   font-size: 3rem;
   font-family: "Bebas Neue", cursive;
-  letter-spacing: 0.1rem;
+  letter-spacing: 2px;
 }
 .video-banner__paragraph {
   margin: 2rem 0;
