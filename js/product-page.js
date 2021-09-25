@@ -73,16 +73,19 @@ let qtyMinus = document.querySelector('.product-page__product-quantity-minus');
 let qtyPlus = document.querySelector('.product-page__product-quantity-plus');
 let qtyAmount = document.querySelector('.product-page__product-quantity-picker');
 
+// Only allow numbers in quantity
 qtyAmount.addEventListener('input', (e) => {
     if (isNaN(e.target.value)) {
         e.target.value = '';
     }
 })
+// Decrement
 qtyMinus.addEventListener('click', () => {
     if (qtyAmount.value > 1) {
         qtyAmount.value--;
     }
 })
+// Increment
 qtyPlus.addEventListener('click', () => {
     qtyAmount.value++;
 })

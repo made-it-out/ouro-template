@@ -1,17 +1,17 @@
 // Get all in case there are multiple
-let accordions = Array.from(document.querySelectorAll('.accordion'));
+let accordionItems = Array.from(document.querySelectorAll('.accordion__item'));
 
-accordions.forEach(accordion => {
-    let accordionOpenBtns = accordion.querySelectorAll('.accordion__open-btn')
-    let accordionCloseBtns = accordion.querySelectorAll('.accordion__close-btn')
-    accordionOpenBtns.forEach(btn => {
+accordionItems.forEach(item => {
+    let openBtns = item.querySelectorAll('.accordion__open-btn')
+    let closeBtns = item.querySelectorAll('.accordion__close-btn')
+    openBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            btn.parentElement.classList.toggle('open');
+            item.classList.toggle('open');
         })
     })
-    accordionCloseBtns.forEach(btn => {
+    closeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            btn.parentElement.classList.toggle('open');
+            item.classList.toggle('open');
         })
     })
 })

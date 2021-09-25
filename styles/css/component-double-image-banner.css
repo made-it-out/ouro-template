@@ -68,12 +68,14 @@
   text-align: center;
   color: var(--clr-white);
   padding: 10%;
+  overflow: hidden;
 }
 .double-image-banner__info {
   max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 .double-image-banner__title {
   font-family: "Bebas Neue", cursive;
