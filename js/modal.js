@@ -11,6 +11,7 @@ modalCloseBtn.addEventListener('click', () => {
     modal.classList.remove('open');
     document.body.classList.remove('modal-open');
 })
+// Make modal appear after 5 seconds
 setTimeout(() => {
     modal.classList.add('open');
     document.body.classList.add('modal-open');

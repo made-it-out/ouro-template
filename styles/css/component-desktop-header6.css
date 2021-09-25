@@ -141,7 +141,7 @@
   visibility: hidden;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: -2rem;
   width: 100vw;
   background-color: var(--clr-off-white);
   z-index: 3;

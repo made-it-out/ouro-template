@@ -11,11 +11,13 @@ if (products) {
         let productTotal = product.querySelector('.cart__product-total-number');
         let removeBtn = product.querySelector('.cart__product-remove-btn');
 
+        // Only allow number inputs to the quantity
         qtyAmount.addEventListener('input', (e) => {
             if (isNaN(e.target.value)) {
                 e.target.value = '';
             }
         })
+        // Decrement
         qtyMinus.addEventListener('click', () => {
             if (qtyAmount.value > 1) {
                 qtyAmount.value = qtyAmount.value - 1;
@@ -23,11 +25,13 @@ if (products) {
                 subtotal.textContent = (parseFloat(subtotal.textContent) - parseFloat(productPrice.textContent)).toFixed(2);
             }
         })
+        // Increment
         qtyPlus.addEventListener('click', () => {
             qtyAmount.value++;
             productTotal.textContent = (qtyAmount.value * parseFloat(productPrice.textContent)).toFixed(2);
             subtotal.textContent = (parseFloat(subtotal.textContent) + parseFloat(productPrice.textContent)).toFixed(2);
         })
+        // Remove
         removeBtn.addEventListener('click', () => {
             subtotal.textContent = (parseFloat(subtotal.textContent) - parseFloat(productTotal.textContent)).toFixed(2);
             product.remove();
