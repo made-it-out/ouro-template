@@ -1,75 +1,54 @@
-// Get all slideshows incase there are multiple
-let slideshows = Array.from(document.querySelectorAll('.slideshow'))
-slideshows.forEach(slideshow => {
-    // Pagination Indicators
-    let slideIndicators = Array.from(slideshow.querySelectorAll('.slideshow__indicator'));
-    // Array of slides
-    let slides = Array.from(slideshow.querySelectorAll('.slideshow__slide'));
+document.addEventListener('DOMContentLoaded', init)
+document.addEventListener('shopify:section:load', init)
 
-    //Carousel
-    let i = 0;
-    let carouselInterval = setInterval(carouselTimer, 5000)
+function init() {
+    const slideshow = document.getElementById(`{{section.id}}`);
+    const slides = Array.from(slideshow.querySelectorAll('.slideshow__slide'));
+    const indicators = Array.from(slideshow.querySelectorAll('.slideshow__indicator'));
+    const interval = {{ section.settings.interval }
+};
 
-    function carouselTimer() {
-        // Get inactive slides and indicators
+
+let activeIndex = 0;
+
+function changeIndex(index) {
+    if (index === 0) {
+
         let inactiveSlides = slides.filter(slide => {
-            return slide != slides[i]
-        });
-        let inactiveSlideIndicators = slideIndicators.filter(slideIndicator => {
-            return slideIndicator != slideIndicators[i]
+            return slide != slides[index]
         })
-        // Remove class from inactive slides and indicators
-        inactiveSlides.forEach(inactiveSlide => {
-            inactiveSlide.classList.remove('slideshow__slide--active');
+        inactiveSlides.forEach(slide => slide.classList.remove('slideshow__slide--active'));
+        let inactiveIndicators = indicators.filter(indicator => {
+            return indicator != indicators[index]
         })
-        inactiveSlideIndicators.forEach(inactiveSlideIndicator => {
-            inactiveSlideIndicator.classList.remove('slideshow__indicator--active');
-        })
-        if (i < slides.length - 1 && i < slideIndicators.length - 1) {
-            // Remove class from first slide and indicator
-            slides[i].classList.remove('slideshow__slide--active');
-            slideIndicators[i].classList.remove('slideshow__indicator--active');
-            i++;
-            // Add class to next slide and indicator
-            slides[i].classList.add('slideshow__slide--active');
-            slideIndicators[i].classList.add('slideshow__indicator--active');
-        }
-        else {
-            // Remove class from last slide and indicator
-            slides[i].classList.remove('slideshow__slide--active');
-            slideIndicators[i].classList.remove('slideshow__indicator--active');
-            i = 0;
-            // Add class to first slide and indicator
-            slides[i].classList.add('slideshow__slide--active');
-            slideIndicators[i].classList.add('slideshow__indicator--active');
-        }
-    }
-    // Event listener for clicking indicators to jump to it's slide
-    slideIndicators.forEach(indicator => {
-        indicator.addEventListener('click', (e) => {
-            i = slideIndicators.indexOf(indicator);
-            // Get inactive slides and indicators
-            let inactiveSlides = slides.filter(slide => {
-                return slide != slides[i]
-            });
-            let inactiveSlideIndicators = slideIndicators.filter(slideIndicator => {
-                return slideIndicator != slideIndicators[i]
-            })
-            // Remove class from inactive slides and indicators
-            inactiveSlides.forEach(inactiveSlide => {
-                inactiveSlide.classList.remove('slideshow__slide--active');
-            })
-            inactiveSlideIndicators.forEach(inactiveSlideIndicator => {
-                inactiveSlideIndicator.classList.remove('slideshow__indicator--active');
-            })
-            // Add class to corresponding slide and indicator
-            slides[i].classList.add('slideshow__slide--active');
-            slideIndicators[i].classList.add('slideshow__indicator--active');
+        inactiveIndicators.forEach(indicator => indicator.classList.remove('slideshow__indicator--active'));
 
-            // Clear interval so slide does not change
-            clearInterval(carouselInterval);
-            // Restart interval
-            carouselInterval = setInterval(carouselTimer, 5000)
+        slides[index].classList.add('slideshow__slide--active');
+        indicators[index].classList.add('slideshow__indicator--active');
+    }
+    else {
+        let inactiveSlides = slides.filter(slide => {
+            return slide != slides[index]
         })
+        inactiveSlides.forEach(slide => slide.classList.remove('slideshow__slide--active'));
+        let inactiveIndicators = indicators.filter(indicator => {
+            return indicator != indicators[index]
+        })
+        inactiveIndicators.forEach(indicator => indicator.classList.remove('slideshow__indicator--active'));
+
+        slides[index].classList.add('slideshow__slide--active');
+        indicators[index].classList.add('slideshow__indicator--active');
+    }
+
+    activeIndex < slides.length - 1 ? activeIndex++ : activeIndex = 0;
+}
+
+let slideshowInterval = setInterval(() => changeIndex(activeIndex), interval)
+
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        activeIndex = index
+        changeIndex(activeIndex);
     })
 })
+    }

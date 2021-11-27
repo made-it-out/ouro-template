@@ -1,72 +1,89 @@
-let featuredProducts = Array.from(document.querySelectorAll('.featured-product'));
+document.addEventListener('DOMContentLoaded', init)
+document.addEventListener('shopify:section:load', init)
 
-featuredProducts.forEach(featuredProduct => {
-    // Pagination Indicators
-    let slideIndicators = Array.from(featuredProduct.querySelectorAll('.featured-product__product-slideshow-indicator'));
-    let imgSlideIndicators = Array.from(featuredProduct.querySelectorAll('.featured-product__product-img-alternate'));
-    // Array of slides
-    let slides = Array.from(featuredProduct.querySelectorAll('.featured-product__product-slide'));
+function init() {
+    const featuredProducts = document.querySelectorAll('.featured-product');
 
-    //Carousel
-    let i = 0;
+    if (featuredProducts.length > 0) {
+        featuredProducts.forEach(featuredProduct => {
+            const slides = Array.from(featuredProduct.querySelectorAll('.featured-product__slide'));
+            const indicators = Array.from(featuredProduct.querySelectorAll('.featured-product__slideshow-indicator'));
+            const imgAlternates = Array.from(featuredProduct.querySelectorAll('.featured-product__img-alternate'));
+            const qtyMinus = featuredProduct.querySelector('.featured-product__quantity-minus')
+            const qtyPlus = featuredProduct.querySelector('.featured-product__quantity-plus')
+            const qtyInput = featuredProduct.querySelector('.featured-product__quantity-input')
 
-    // Event listener for clicking indicators to jump to it's slide
-    slideIndicators.forEach(indicator => {
-        indicator.addEventListener('click', (e) => {
-            i = slideIndicators.indexOf(indicator);
-            // Get inactive slides and indicators
-            let inactiveSlides = slides.filter(slide => {
-                return slide != slides[i]
-            });
-            let inactiveSlideIndicators = slideIndicators.filter(slideIndicator => {
-                return slideIndicator != slideIndicators[i]
+            // Change image and indicators
+            function changeIndex(index) {
+                // get inactive slides
+                let inactiveSlides = slides.filter(slide => {
+                    return slide != slides[index]
+                })
+                // remove active class from inactive slides
+                inactiveSlides.forEach(slide => slide.classList.remove('featured-product__slide--active'));
+
+                // get inactive indicators
+                let inactiveIndicators = indicators.filter(indicator => {
+                    return indicator != indicators[index]
+                })
+                // remove active class from inactive indicators
+                inactiveIndicators.forEach(indicator => indicator.classList.remove('featured-product__slideshow-indicator--active'));
+
+                // get inactive image alternates
+                let inactiveImgAlternates = imgAlternates.filter(imgAlternate => {
+                    return imgAlternate != imgAlternates[index]
+                })
+                // remove active class from inactive image alternates
+                inactiveImgAlternates.forEach(imgAlternate => imgAlternate.classList.remove('featured-product__img-alternate--active'));
+
+                // add active class to current
+                slides[index].classList.add('featured-product__slide--active');
+                indicators[index].classList.add('featured-product__slideshow-indicator--active');
+                imgAlternates[index].classList.add('featured-product__img-alternate--active');
+            }
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', (event) => changeIndex(index));
+                indicator.addEventListener('keydown', (event) => {
+                    if (event.keyCode === 13 || event.keyCode === 32) {
+                        changeIndex(index)
+                    }
+                });
             })
-            let inactiveimgSlideIndicators = imgSlideIndicators.filter(slideIndicator => {
-                return slideIndicator != imgSlideIndicators[i]
+
+            imgAlternates.forEach((imgAlternate, index) => {
+                imgAlternate.addEventListener('click', (event) => changeIndex(index));
+                imgAlternate.addEventListener('keydown', (event) => {
+                    if (event.keyCode === 13 || event.keyCode === 32) {
+                        changeIndex(index)
+                    }
+                });
             })
-            // Remove class from inactive slides and indicators
-            inactiveSlides.forEach(inactiveSlide => {
-                inactiveSlide.classList.remove('featured-product__product-slide--active');
+
+            // Quantity
+            qtyPlus.addEventListener('click', qtyIncrement)
+            qtyPlus.addEventListener('keydown', (event) =>{
+                if(event.keyCode === 13 || event.keyCode === 32){
+                    qtyIncrement();
+                }
             })
-            inactiveSlideIndicators.forEach(inactiveSlideIndicator => {
-                inactiveSlideIndicator.classList.remove('featured-product__product-slideshow-indicator--active');
+            qtyMinus.addEventListener('click', qtyDecrement);
+            qtyMinus.addEventListener('keydown', (event) =>{
+                if(event.keyCode === 13 || event.keyCode === 32){
+                    qtyDecrement();
+                }
             })
-            inactiveimgSlideIndicators.forEach(inactiveSlideIndicator => {
-                inactiveSlideIndicator.classList.remove('featured-product__product-img-alternate--active');
-            })
-            // Add class to corresponding slide and indicator
-            slides[i].classList.add('featured-product__product-slide--active');
-            slideIndicators[i].classList.add('featured-product__product-slideshow-indicator--active');
-            imgSlideIndicators[i].classList.add('featured-product__product-img-alternate--active');
+
+            function qtyIncrement(){
+                qtyInput.value++;
+            }
+            function qtyDecrement(){
+                if(qtyInput.value > 1){
+                    qtyInput.value--;
+                }
+            }
         })
-    })
-    imgSlideIndicators.forEach(indicator => {
-        indicator.addEventListener('click', (e) => {
-            i = imgSlideIndicators.indexOf(indicator);
-            // Get inactive slides and indicators
-            let inactiveSlides = slides.filter(slide => {
-                return slide != slides[i]
-            });
-            let inactiveSlideIndicators = slideIndicators.filter(slideIndicator => {
-                return slideIndicator != slideIndicators[i]
-            })
-            let inactiveimgSlideIndicators = imgSlideIndicators.filter(slideIndicator => {
-                return slideIndicator != imgSlideIndicators[i]
-            })
-            // Remove class from inactive slides and indicators
-            inactiveSlides.forEach(inactiveSlide => {
-                inactiveSlide.classList.remove('featured-product__product-slide--active');
-            })
-            inactiveSlideIndicators.forEach(inactiveSlideIndicator => {
-                inactiveSlideIndicator.classList.remove('featured-product__product-slideshow-indicator--active');
-            })
-            inactiveimgSlideIndicators.forEach(inactiveSlideIndicator => {
-                inactiveSlideIndicator.classList.remove('featured-product__product-img-alternate--active');
-            })
-            // Add class to corresponding slide and indicator
-            slides[i].classList.add('featured-product__product-slide--active');
-            slideIndicators[i].classList.add('featured-product__product-slideshow-indicator--active');
-            imgSlideIndicators[i].classList.add('featured-product__product-img-alternate--active');
-        })
-    })
-})
+    }
+
+
+}
