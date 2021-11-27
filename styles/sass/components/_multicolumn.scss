@@ -1,0 +1,109 @@
+.multicolumn{
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    background-color: var(--clr-white);
+    &--align-left{
+        .column{
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+    &--align-center{
+        .column{
+            align-items: center;
+            text-align: center;
+
+            &__date-and-author{
+                justify-content: center;
+            }
+            &__btn{
+                margin: auto;
+            }
+        }
+    }
+    &--align-right{
+        .column{
+            align-items: flex-end;
+            text-align: right;
+
+            &__date-and-author{
+                justify-content: flex-end;
+            }
+            &__btn{
+                margin-left: auto;
+            }
+        }
+    }
+    &__heading{
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+        color: var(--clr-black);
+    }
+    &__btn{
+        margin: 2rem auto;
+    }
+}
+.column{
+    &--no-img{
+        .column__inner-container{
+            border: 1px solid var(--clr-off-white);
+            background-color: var(--clr-x-light-grey);
+            padding: .5rem;
+        }
+    }
+    &__inner-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        background-color: var(--clr-white);
+    }
+
+    &__img-container{
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    &__heading{
+        font-size: 1.3rem;
+        color: var(--clr-black);
+    }
+    &__description{
+        color: var(--clr-black);
+    }
+    &__date-and-author{
+        display: flex;
+        gap: 1rem;
+    }
+    &__date{
+        color: var(--clr-black);
+        font-size: .8rem;
+        padding-right: .5rem;
+    }
+    &__author{
+        position: relative;
+        color: var(--clr-black);
+        font-size: .8rem;
+        padding-left: .5rem;
+
+        &--with-date::before{
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            height: .4rem;
+            width: .4rem;
+            background-color: var(--clr-black);
+            top: 50%;
+            left: -.7rem;
+            transform: translateY(-50%);
+        }
+    }
+}

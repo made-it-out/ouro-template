@@ -1,0 +1,39 @@
+@use '../abstracts/'as a;
+
+.contact-page {
+    &__container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @include a.mq-min(768px) {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__header {
+        font-size: 1.8rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        gap: .5rem;
+    }
+
+    &__icon {
+        color: var(--clr-accent);
+    }
+}

@@ -1,0 +1,109 @@
+@use '../abstracts/'as a;
+
+.order-history {
+    background-color: var(--clr-white);
+
+    &__heading {
+        letter-spacing: 1px;
+        color: var(--clr-black);
+        margin-bottom: 1rem;
+    }
+
+    &__details {
+        margin-bottom: 2rem;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        width: 100%;
+
+        @include a.mq-min(768px) {
+            border: 1px solid var(--clr-light-grey);
+        }
+    }
+
+    &__head {
+        color: var(--clr-black);
+        background-color: var(--clr-off-white);
+        display: none;
+
+        @include a.mq-min(768px) {
+            display: table-header-group;
+        }
+    }
+
+    &__header,
+    &__cell{
+        padding: 1rem;
+    }
+
+    &__orders {
+        background-color: var(--clr-white);
+    }
+
+    &__order {
+        display: flex;
+        flex-direction: column;
+
+        @include a.mq-min(768px) {
+            display: table-row;
+        }
+    }
+
+    &__cell {
+        display: flex;
+        justify-content: space-between;
+
+        @include a.mq-min(768px) {
+            display: table-cell;
+        }
+    }
+
+    &__key {
+        text-align: left;
+        font-weight: bold;
+        color: var(--clr-black);
+
+        @include a.mq-min(768px) {
+            display: none;
+        }
+    }
+
+    &__value {
+        text-align: right;
+        color: var(--clr-black);
+    }
+
+    &__headers {
+        border-bottom: 1px solid var(--clr-light-grey);
+        ;
+    }
+
+    &__header:nth-child(1),
+    &__order .order-history__cell:nth-child(1) {
+        @include a.mq-min(768px) {
+            text-align: left;
+        }
+    }
+
+    &__header:not(:nth-child(1)),
+    &__order .order-history__cell:not(:nth-child(1)) {
+        @include a.mq-min(768px) {
+            text-align: right;
+        }
+    }
+
+    &__order {
+        border-bottom: 1px solid var(--clr-light-grey);
+        ;
+
+        &:nth-child(1) {
+            border-top: 1px solid var(--clr-light-grey);
+            ;
+        }
+
+        .order-history__cell:nth-child(1) .order-history__value {
+            text-decoration: underline;
+        }
+    }
+}

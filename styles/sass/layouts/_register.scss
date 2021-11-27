@@ -1,0 +1,33 @@
+.register-page{
+    padding: 2rem 0;
+    width: 100%;
+    background-color: var(--clr-white);
+    &__container{
+        margin: auto;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    &__heading{
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 500;
+        color: var(--clr-black);
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text-field{
+        width: 100%;
+    }
+}

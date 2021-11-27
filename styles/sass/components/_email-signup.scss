@@ -1,0 +1,35 @@
+.email-signup{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__container{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        background-color: rgba(0,0,0,0.5);
+    }
+    &__heading{
+        text-align: center;
+        color: var(--color-heading);
+    }
+    &__body{
+        text-align: center;
+        color: var(--color-body);
+    }
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+        justify-content: center;
+    }
+    &__message{
+        margin-top: .5rem;
+        color: var(--color-body);
+    }
+}

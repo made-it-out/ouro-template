@@ -1,0 +1,69 @@
+.announcement{
+    position: relative;
+    background-color: var(--color-announcement-bg);
+    color: var(--color-announcement-text);
+    text-align: center;
+    padding: 3rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    overflow: hidden;
+    
+    a{
+        color: var(--color-announcement-text);
+    }
+    &__close-btn{
+        position: absolute;
+        top: .5rem;
+        right: 1.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    &__slide{
+        position: absolute;
+        top: -.5rem;
+        left: 0;
+        transform: translateX(100vw);
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        text-align: center;
+        transition: all 1000ms ease-in-out;
+
+        &--active{
+            transform: translateX(0);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &__indicators{
+        position: absolute;
+        bottom: .2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .6rem;
+    }
+    &__indicator{
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        border: 2px solid var(--color-announcement-text);
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+
+        &--active{
+            height: 15px;
+            width: 15px;
+            background-color: var(--color-announcement-text);
+        }
+    }
+  }

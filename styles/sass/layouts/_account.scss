@@ -1,0 +1,18 @@
+.account{
+    padding: 2rem 0;
+    background-color: var(--clr-white);
+
+    &__heading{
+        letter-spacing: 1px;
+        color: var(--clr-black);
+        margin-bottom: 1rem;
+    }
+    &__column{
+        margin-bottom: 2rem;
+    }
+
+    .address{
+        margin-top: 1rem;
+        align-items: flex-start;
+    }
+}
