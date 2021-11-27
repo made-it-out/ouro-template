@@ -1,0 +1,236 @@
+// Logo and searchbar are positioned absolute in order to keep the menu direclty in the center. Be mindful of padding when changing fonts and font sizes
+
+.desktop-header1{
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.23);
+    justify-content: center;
+    @media only screen and (max-width: 1023px){
+        display: none;
+    }
+
+    &.collapsed{
+        padding: 3rem 0;
+
+        .desktop-header1__links{
+            display: none;
+        }
+        .desktop-header1__fullscreen-menu-open-btn{
+            display: inline-block;
+        }
+    }
+    &.together{
+        justify-content: flex-end;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    &__logo-container{
+        max-width: 150px;
+        position: absolute;
+        left: 2rem;
+        &:hover .desktop-header1__logo{
+            &--primary{
+                opacity: 0;
+            }
+            &--secondary{
+                opacity: 1;
+            }
+        }
+    }
+    &__logo{
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        transition: color 300ms ease-in-out;
+        &--primary{
+            position: relative;
+            opacity: 1;
+            left: 0;
+            transition: all 300ms ease-in-out;
+        }
+        &--secondary{
+            position: absolute;
+            opacity: 0;
+            left: 0;
+            transition: all 300ms ease-in-out;
+        }
+    }
+    &__links{
+        display: flex;
+        margin-right: 0;
+        &.show{
+            display: flex !important;
+        }
+    }
+    &__link{
+        margin: 0 .5rem;
+        font-size: 1.3rem;
+        // the value for this padding-bottom is utilized in multiple places that follow
+        padding: 2rem 0;
+        &:hover{
+            color: var(--clr-accent);
+            .desktop-header1__sub-menus{
+                opacity: 1;
+                pointer-events: all;
+                visibility: visible;
+            }
+            .fa-chevron-down{
+                transform: rotate(180deg);
+            }
+            .desktop-header1__main-link::after{
+                opacity: 1;
+                visibility: visible;
+                width: 100%;
+            }
+        }
+    }
+    &__main-link{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: '';
+            height: .5rem;
+            width: 0;
+            visibility: hidden;
+            opacity: 0;
+            // set bottom equal to the negative padding-bottom of .desktop-header1__link
+            bottom: -2rem;
+            left:0;
+            background-color: var(--clr-accent);
+            transition: all 300ms ease-in-out;
+        }
+    }
+    &__sub-menus{
+        display: flex;
+        gap: 2rem;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        background-color: var(--clr-off-white);
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.23);
+        z-index: 3;
+        transition: all 300ms ease-in-out;
+        max-height: 70vh;
+        padding: 1rem 5rem;
+        &::before{
+            position: absolute;
+            content: '';
+            // set height equal to the padding-bottom of .desktop-header1__link
+            height: 2rem;
+            // set top equal to the negative padding-bottom of .desktop-header1__link
+            top: -2rem;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+        }
+        &--align-left{
+            justify-content: flex-start;
+        }
+        &--align-center{
+            justify-content: center;
+        }
+        &--align-right{
+            justify-content: flex-end;
+        }
+    }
+    &__sub-menu{
+        padding: 1.2rem .8rem;
+        
+        a{
+            color: var(--clr-black);
+            font-size: 1rem;
+            font-weight: 400;
+            &:hover{
+                color: var(--clr-accent);
+            }
+        }
+    }
+    .fa-chevron-down{
+        transition: all 300ms ease-in-out;
+    }
+    &__icons{
+        display: flex;
+
+        i{
+            transition: color 200ms ease-in-out;
+            &:hover{
+                color: var(--clr-accent);
+            }
+        }
+    }
+    &__icons > *{
+        padding: 0 .4rem;
+    }
+    &__cart{
+        position: relative;
+
+        &-count{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            color: var(--clr-white);
+            background-color: var(--clr-accent);
+            font-size: .7rem;
+            height: 1.2rem;
+            width: 1.2rem;
+            border-radius: 50%;
+            top: -.5rem;
+            right: -.2rem;
+        }
+    }
+    &__search-and-icons{
+        position: absolute;
+        right: 2rem;
+        display: flex;
+        align-items: center;
+        gap: .4rem;
+    }
+    &__searchbar{
+        border: 1px solid var(--clr-light-grey);
+        background-color: var(--clr-white);
+        overflow: hidden;
+        border-radius: 3px;
+        display: flex;
+        transition: all 300ms ease-in-out;
+        &.border{
+            border-color: var(--clr-black);
+
+            .search-icon{
+                color: var(--clr-accent);
+            }
+        }
+        input{
+            padding: .5rem;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            width: 100%;
+            background-color: var(--clr-white);
+        }
+        .search-icon{
+            padding: .5rem;
+            cursor: pointer;
+        }
+    }
+    &__fullscreen-menu-open-btn{
+        display: none;
+        cursor: pointer;
+    }
+}

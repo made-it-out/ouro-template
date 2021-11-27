@@ -1,0 +1,22 @@
+.faq{
+    padding: 4rem 0;
+
+    &__subtitle{
+        margin: 2rem auto;
+        text-align: center;
+    }
+    .accordion{
+        padding: 0;
+        border: 1px solid var(--clr-light-grey);
+
+        &__item:first-child{
+            border-top: none;
+        }
+        &__item:last-child{
+            border-bottom: none;
+        }
+        &__label{
+            background-color: var(--clr-x-light-grey);
+        }
+    }
+}

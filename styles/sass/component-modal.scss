@@ -1,0 +1,190 @@
+.modal{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 500ms ease-in-out;
+    z-index: 4;
+    &.open{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+    &__container{
+        position: relative;
+        margin: auto;
+        border-radius: 3px;
+        overflow: hidden;
+        width: 100%;
+        height: 80vh;
+        max-width: 900px;
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+        z-index: 4;
+        @media only screen and (min-width: 768px){
+            flex-direction: row;
+        }
+    }
+    &__left{
+        min-height: 1px;
+    }
+    &__img-container{
+        width: 100%;
+        height: 100%;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 20%;
+    }
+    &__right{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 50%;
+        flex-shrink: 0;
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+    }
+    &__logo-container{
+        position: relative;
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+        max-width: 200px;
+
+        &::after{
+            position: absolute;
+            content: '';
+            background-color: var(--clr-white);
+            height: 1px;
+            width: 200%;
+            bottom: -.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__logo{
+        width: 100%;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    &__btn{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        gap: .5em;
+        align-items: center;
+        width: fit-content;
+        transition: all 300ms ease-in-out;
+        text-decoration: none;
+        .fa-chevron-left,
+        .fa-chevron-right{
+            display: none;
+            transition: left 300ms ease-in-out, right 300ms ease-in-out;
+        }
+    
+        &--color-swap{
+            padding: 1em 1.7em;
+            color: var(--clr-white);
+            background-color: transparent;
+            border: 2px solid var(--clr-white);
+    
+            &:hover{
+                color: var(--clr-black);
+                background-color: var(--clr-white);
+                border-color: var(--clr-white);
+            }            
+        }
+        &--grow{
+            padding: 1em 1.7em;
+            color: var(--clr-white);
+            background-color: var(--clr-accent);
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+        &--underline{
+            color: var(--clr-black);
+            span{
+                border-bottom: 1px solid var(--clr-black);
+            }
+            &:hover{
+                color: var(--clr-accent);
+            span{
+                border-bottom: 1px solid var(--clr-accent);
+            }
+            }
+        }
+        &--opacity-decrease{
+            padding: 1em 1.7em;
+            color: var(--clr-white);
+            background-color: var(--clr-accent);
+            transition: all 100ms ease-in-out;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        &--left-arrow{
+            .fa-chevron-left{
+                display: inline-block;
+                position: relative;
+                left: 0;
+                font-size: 1rem !important;
+            }
+            &:hover{
+                .fa-chevron-left{
+                    left: -1rem;
+                }
+            }
+        }
+        &--right-arrow{
+            .fa-chevron-right{
+                display: inline-block;
+                position: relative;
+                right: 0;
+                font-size: 1rem !important;
+            }
+            &:hover{
+                .fa-chevron-right{
+                    right: -1rem;
+                }
+            }
+        }
+    }
+    &__after{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.9);
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    &__close-btn{
+        color: var(--clr-white);
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+        transition: color 200ms ease-in-out;
+        &:hover{
+            color: var(--clr-red);
+        }
+    }
+}
