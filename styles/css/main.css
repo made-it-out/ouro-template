@@ -137,6 +137,11 @@ a {
   }
 }
 
+.element__title {
+  margin: 2rem auto;
+  text-align: center;
+}
+
 .about-page .image-banner {
   margin-bottom: 2rem;
 }
@@ -3034,8 +3039,8 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 
 .footer {
-  background-color: var(--clr-black);
-  color: var(--clr-dark-grey);
+  background-color: var(--color-black);
+  color: var(--color-dark-grey);
   padding: 3rem 0;
   margin-top: auto;
 }
@@ -3049,18 +3054,16 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   margin-bottom: 1rem;
 }
 .footer__column-title {
-  font-size: 1rem;
   font-weight: 700;
-  color: var(--clr-accent);
+  color: var(--color-primary);
 }
 .footer__link {
-  color: var(--clr-dark-grey);
-  font-size: 0.8rem;
+  color: var(--color-dark-grey);
   margin: 0.5rem 0;
   text-decoration: none;
 }
 .footer__link:hover {
-  color: var(--clr-accent);
+  color: var(--color-primary);
 }
 .footer__extra {
   display: flex;
@@ -3068,9 +3071,8 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   margin-bottom: 1rem;
 }
 .footer__extra p {
-  font-size: 0.7rem;
   line-height: 1.7;
-  color: var(--clr-dark-grey);
+  color: var(--color-dark-grey);
 }
 .footer__input {
   margin: 0.5rem 0;
@@ -3083,8 +3085,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 .footer__social-icon {
   text-decoration: none;
   margin: 0.5rem 0;
-  font-size: 0.8rem;
-  color: var(--clr-dark-grey);
+  color: var(--color-dark-grey);
 }
 .footer__social-icon span {
   margin-left: 0.5rem;
@@ -3094,26 +3095,22 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   height: 1rem;
 }
 .footer__social-icon:hover {
-  color: var(--clr-accent);
+  color: var(--color-primary);
 }
 .footer__bottom {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--clr-white);
-  border-top: 1px solid var(--clr-accent);
+  border-top: 1px solid var(--color-primary);
   padding-top: 1.25rem;
 }
-.footer__copyright {
-  font-size: 0.8rem;
-}
 .footer__bottom-link {
-  color: var(--clr-dark-grey);
-  font-size: 0.8rem;
+  color: var(--color-dark-grey);
   margin-right: 0.5rem;
   text-decoration: none;
 }
 .footer__bottom-link:hover {
-  color: var(--clr-accent);
+  color: var(--color-primary);
 }
 
 .image-banner {
