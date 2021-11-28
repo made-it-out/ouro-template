@@ -8,12 +8,13 @@
 
 
 body {
-  background-color: var(--clr-white);
+  background-color: var(--color-white);
 
   &.body {
     &--modal-open,
     &--navbar-shown {
       overflow-y: hidden;
+      position: fixed;
     }
   }
 }
