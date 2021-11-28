@@ -3634,8 +3634,8 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 
 .announcement {
   position: relative;
-  background-color: var(--color-announcement-bg);
-  color: var(--color-announcement-text);
+  background-color: var(--color-black);
+  color: var(--color-white);
   text-align: center;
   padding: 3rem;
   width: 100vw;
@@ -3646,7 +3646,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   overflow: hidden;
 }
 .announcement a {
-  color: var(--color-announcement-text);
+  color: var(--color-white);
 }
 .announcement__close-btn {
   position: absolute;
@@ -3689,14 +3689,14 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  border: 2px solid var(--color-announcement-text);
+  border: 2px solid var(--color-white);
   cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 .announcement__indicator--active {
   height: 15px;
   width: 15px;
-  background-color: var(--color-announcement-text);
+  background-color: var(--color-white);
 }
 
 .slideshow {

@@ -1,7 +1,7 @@
 .announcement{
     position: relative;
-    background-color: var(--color-announcement-bg);
-    color: var(--color-announcement-text);
+    background-color: var(--color-black);
+    color: var(--color-white);
     text-align: center;
     padding: 3rem;
     width: 100vw;
@@ -12,7 +12,7 @@
     overflow: hidden;
     
     a{
-        color: var(--color-announcement-text);
+        color: var(--color-white);
     }
     &__close-btn{
         position: absolute;
@@ -56,14 +56,14 @@
         height: 12px;
         width: 12px;
         border-radius: 50%;
-        border: 2px solid var(--color-announcement-text);
+        border: 2px solid var(--color-white);
         cursor: pointer;
         transition: all 300ms ease-in-out;
 
         &--active{
             height: 15px;
             width: 15px;
-            background-color: var(--color-announcement-text);
+            background-color: var(--color-white);
         }
     }
   }
