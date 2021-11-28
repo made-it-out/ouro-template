@@ -1,10 +1,10 @@
 accordion-component{
     width: 90vw;
     max-width: 500px;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     overflow: hidden;
     border-radius: 5px;
-    margin: 25px 0;
+    margin: 25px auto;
 }
 
 .accordion__item{
@@ -12,10 +12,9 @@ accordion-component{
 }
 
 .accordion__heading{
-    padding: 15px 18px;
-    background-color: #240da8;
-    color: #ffffff;
-    font-size: 1.2em;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     position: relative;
 }
 
@@ -35,9 +34,9 @@ accordion-component.ready .accordion__heading::after{
     display: inline-block;
     width: 12px;
     height: 3px;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     right: 15px;
-    top: 25px;
+    top: 50%;
     border-radius: 2px;
     transition: transform 300ms ease;
 }
