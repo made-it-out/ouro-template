@@ -3245,6 +3245,11 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   width: 100%;
   padding: 2rem 0;
 }
+@media only screen and (min-width: 768px) {
+  .image-with-text {
+    padding: 4rem 0;
+  }
+}
 .image-with-text--reverse .image-with-text__row {
   flex-direction: row-reverse;
 }
@@ -3277,8 +3282,8 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
     padding-right: 2rem;
   }
 }
-.image-with-text__heading {
-  letter-spacing: 1px;
+.image-with-text__text {
+  color: var(--color-dark-grey);
 }
 
 .modal {
