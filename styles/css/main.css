@@ -61,9 +61,16 @@ a {
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --font-family-xl-heading: "Cinzel", serif;
+  --font-family-heading: "Poppins", sans-serif;
+  --font-family-subheading: "Poppins", sans-serif;
+  --font-family-body: "Poppins", sans-serif;
+}
+
 .xl-heading {
   font-size: 3.5rem;
-  font-family: "Cinzel", serif;
+  font-family: var(--font-family-xl-heading);
 }
 @media screen and (min-width: 768px) {
   .xl-heading {
@@ -78,7 +85,7 @@ a {
 
 .heading {
   font-size: 1.75rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family-heading);
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -94,7 +101,7 @@ a {
 
 .subheading {
   font-size: 1.25rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family-subheading);
 }
 @media screen and (min-width: 768px) {
   .subheading {
@@ -109,7 +116,7 @@ a {
 
 .body, body {
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family-body);
 }
 @media screen and (min-width: 768px) {
   .body, body {
@@ -124,7 +131,7 @@ a {
 
 .small {
   font-size: 0.625rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family-body);
 }
 @media screen and (min-width: 768px) {
   .small {
@@ -2171,16 +2178,21 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 
 .collection-list {
-  background-color: var(--clr-white);
-  padding-top: 1rem;
+  background-color: var(--color-white);
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .collection-list {
+    padding: 4rem 0;
+  }
 }
 .collection-list__heading {
   margin-bottom: 2rem;
-  color: var(--clr-black);
-  text-align: center;
+  color: var(--color-black);
 }
 
 .collection {
+  position: relative;
   width: 100%;
   height: 100%;
   transition: all 300ms ease-in-out;
@@ -2230,12 +2242,15 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0.5rem;
   z-index: 2;
   text-align: center;
-  font-size: 1.7rem;
-  letter-spacing: 1px;
-  color: var(--clr-white);
+  letter-spacing: 2px;
+  color: var(--color-white);
   transition: all 300ms ease-in-out;
+  font-family: var(--font-family-xl-heading);
+  word-wrap: break-word;
 }
 
 .contact-form {

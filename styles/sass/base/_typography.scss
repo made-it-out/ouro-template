@@ -22,6 +22,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root{
+    --font-family-xl-heading: 'Cinzel', serif;
+    --font-family-heading: 'Poppins', sans-serif;
+    --font-family-subheading: 'Poppins', sans-serif;
+    --font-family-body: 'Poppins', sans-serif;
+}
+
 // Font Sizes
 $fs-xl-heading: (
     null: 3.5rem,
@@ -52,26 +59,26 @@ $fs-small:(
 
 .xl-heading{
     @include a.fs($fs-xl-heading);
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-family-xl-heading);
 }
 
 .heading{
     @include a.fs($fs-heading);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-heading);
     font-weight: 600;
 }
 
 .subheading{
     @include a.fs($fs-subheading);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-subheading);
 }
 
 .body, body{
     @include a.fs($fs-body);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-body);
 }
 
 .small{
     @include a.fs($fs-small);
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-body);
 }
