@@ -1,7 +1,7 @@
 @use '../abstracts/'as a;
 
 .testimonials {
-    background-color: var(--color-bg);
+    background-color: var(--color-light-grey);
     padding: 2rem 0;
     overflow-x: hidden;
 
@@ -10,25 +10,14 @@
     }
 
     &__heading {
-        font-size: 2.5rem;
+        font-weight: 600;
         text-align: center;
-        color: var(--color-heading);
         margin-bottom: 1rem;
-
-        @include a.mq-min(768px) {
-            font-size: 3.5rem;
-        }
-    }
-
-    &__subheading {
-        text-align: center;
-        color: var(--color-subheading);
     }
 
     &__slider {
         width: min(100vw, 550px);
-        margin: auto;
-        height: 100vh;
+        margin: 2rem auto;
         max-height: 500px;
         display: flex;
         align-items: center;
@@ -49,7 +38,7 @@
         transition: transform 400ms ease-in-out, background-color 250ms ease-in-out;
 
         &--active {
-            background-color: var(--color-slide);
+            background-color: var(--color-white);
             box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
 
             .testimonials__author,
@@ -60,10 +49,11 @@
     }
 
     &__quotation-mark {
-        color: var(--color-quotation-mark);
+        color: var(--color-light-grey);
         position: absolute;
         left: 15%;
         top: 15%;
+        z-index: -1;
     }
 
     &__img-container {
@@ -87,19 +77,17 @@
         margin-bottom: .5rem;
 
         i {
-            color: var(--color-stars);
+            color: #ffec63;
         }
     }
 
     &__author {
-        font-size: 1.2rem;
+        font-weight: 600;
         margin-bottom: 1rem;
-        color: var(--color-author);
         opacity: .6;
     }
 
     &__quote {
-        color: var(--color-quote);
         opacity: .6;
     }
 
@@ -112,7 +100,6 @@
 
     &__previous,
     &__next {
-        color: var(--color-arrows);
         width: 3rem;
         height: 3rem;
         display: flex;
@@ -123,8 +110,8 @@
 
         &--active {
             cursor: pointer;
-            color: var(--color-arrows-active);
-            background-color: var(--color-arrows-bg);
+            color: var(--color-white);
+            background-color: var(--color-primary);
         }
     }
 }
