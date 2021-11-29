@@ -2711,50 +2711,6 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   color: var(--color-primary);
 }
 
-.double-image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-.double-image.portrait {
-  padding-bottom: 133%;
-}
-.double-image.landscape {
-  padding-bottom: 67%;
-}
-.double-image.square {
-  padding-bottom: 100%;
-}
-.double-image.grow:hover .double-image__img {
-  transform: scale(1.06);
-}
-.double-image:hover .double-image__img--primary {
-  opacity: 0;
-}
-.double-image:hover .double-image__img--secondary {
-  opacity: 1;
-}
-.double-image__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
-  transition: all 500ms ease-in-out;
-}
-.double-image__img--primary {
-  opacity: 1;
-}
-.double-image__img--secondary {
-  opacity: 0;
-}
-
 .double-image-banner {
   width: 100%;
   height: 100vh;
@@ -3614,13 +3570,25 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 
 .product-grid {
-  padding-top: 1rem;
-  background-color: var(--clr-white);
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .product-grid {
+    padding: 4rem 0;
+  }
 }
 .product-grid__title {
-  font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--clr-black);
+  font-weight: 600;
+}
+.product-grid__grid--scale-image .product-grid__product-img-container:hover .product-grid__product-img {
+  transform: scale(1.06);
+}
+.product-grid__grid--alternate-image .product-grid__product-img-container:hover .product-grid__product-img--primary {
+  opacity: 0;
+}
+.product-grid__grid--alternate-image .product-grid__product-img-container:hover .product-grid__product-img--secondary {
+  opacity: 1;
 }
 .product-grid__product {
   text-decoration: none;
@@ -3629,7 +3597,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 .product-grid__product--on-sale, .product-grid__product--sold-out {
   position: relative;
 }
-.product-grid__product--sold-out .double-image {
+.product-grid__product--sold-out .product-grid__product-img-container {
   opacity: 0.5;
 }
 .product-grid__product-badge, .product-grid__product-badge--sold-out, .product-grid__product-badge--on-sale {
@@ -3639,28 +3607,47 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   padding: 0.5em 0.8em;
   border-radius: 3px;
   box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.23);
+  color: var(--color-white);
   z-index: 1;
 }
 .product-grid__product-badge--on-sale {
-  background-color: var(--clr-sale);
-  color: var(--clr-white);
+  background-color: var(--color-sale);
 }
 .product-grid__product-badge--sold-out {
-  background-color: var(--clr-sold-out);
-  color: var(--clr-black);
+  background-color: var(--color-sold-out);
+}
+.product-grid__product-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+.product-grid__product-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  transition: all 500ms ease-in-out;
+}
+.product-grid__product-img--primary {
+  opacity: 1;
+}
+.product-grid__product-img--secondary {
+  opacity: 0;
 }
 .product-grid__product-info {
   margin-top: 0.5rem;
 }
 .product-grid__product-vendor {
-  font-size: 0.8rem;
   margin-bottom: 0.2rem;
-  color: var(--clr-black);
-  opacity: 0.8;
-}
-.product-grid__product-name {
-  font-size: 1.2rem;
-  color: var(--clr-black);
+  color: var(--color-dark-grey);
 }
 .product-grid__product-prices {
   display: flex;
@@ -3672,13 +3659,11 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   margin-right: 1rem;
 }
 .product-grid__product-price {
-  font-size: 1rem;
   letter-spacing: 0.1rem;
-  color: var(--clr-black);
-  font-weight: bold;
+  font-weight: 600;
 }
 .product-grid__product-compare-price + .product-grid__product-price {
-  color: var(--clr-sale);
+  color: var(--color-sale);
 }
 
 .announcement {
