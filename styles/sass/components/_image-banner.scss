@@ -1,45 +1,52 @@
 @use '../abstracts'as a;
 
-.image-banner{
+.image-banner {
     width: 100%;
     height: 100vh;
     position: relative;
 
-    &--50{
+    &--50 {
         height: 50vh;
         min-height: 200px;
     }
-    &--align-horizontal-center{
-        .image-banner__content-container{
+
+    &--align-horizontal-center {
+        .image-banner__content-container {
             justify-content: center;
         }
     }
-    &--align-horizontal-left{
-        .image-banner__content-container{
+
+    &--align-horizontal-left {
+        .image-banner__content-container {
             justify-content: flex-start;
         }
     }
-    &--align-horizontal-right{
-        .image-banner__content-container{
+
+    &--align-horizontal-right {
+        .image-banner__content-container {
             justify-content: flex-end;
         }
     }
-    &--align-vertical-top{
-        .image-banner__content-container{
+
+    &--align-vertical-top {
+        .image-banner__content-container {
             align-items: flex-start;
         }
     }
-    &--align-vertical-center{
-        .image-banner__content-container{
+
+    &--align-vertical-center {
+        .image-banner__content-container {
             align-items: center;
         }
     }
-    &--align-vertical-bottom{
-        .image-banner__content-container{
+
+    &--align-vertical-bottom {
+        .image-banner__content-container {
             align-items: flex-end;
         }
     }
-    &__bg{
+
+    &__bg {
         position: absolute;
         top: 0;
         left: 0;
@@ -48,45 +55,31 @@
         width: 100%;
         height: 100%;
     }
-    &__content-container{
+
+    &__content-container {
         position: absolute;
         display: flex;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         text-align: center;
-        color: var(--clr-white);
+        color: var(--color-white);
         padding: 1rem;
-        @include a.mq-min(576px){
+
+        @include a.mq-min(576px) {
             padding: 4rem;
         }
 
     }
-    &__info{
+
+    &__info {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    &__heading{
-        font-size: 3rem;
-        font-family: 'Bebas Neue', cursive;
-        letter-spacing: 2px;
 
-        @include a.mq-min(576px){
-            font-size: 4rem;
-        }
-    }
-    &__btn{
-        font-weight: bold;
-        color: var(--clr-white) !important;
-        border-color: var(--clr-white) !important;
-        background-color: transparent !important;
-
-        &:hover{
-            color: var(--clr-white) !important;
-            border-color: var(--clr-accent) !important;
-            background-color: var(--clr-accent) !important;  
-        }
+    &__heading {
+        letter-spacing: 4px;
     }
 }

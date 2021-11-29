@@ -196,6 +196,7 @@
         grid-area: header-logo;
         max-width: 150px;
         position: relative;
+        align-self: center;
         &:hover{
             .header__logo--primary{
                 opacity: 0;

@@ -2417,6 +2417,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   grid-area: header-logo;
   max-width: 150px;
   position: relative;
+  align-self: center;
 }
 .header__logo-container:hover .header__logo--primary {
   opacity: 0;
@@ -3220,9 +3221,9 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
-  color: var(--clr-white);
+  color: var(--color-white);
   padding: 1rem;
 }
 @media only screen and (min-width: 576px) {
@@ -3237,25 +3238,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   gap: 1rem;
 }
 .image-banner__heading {
-  font-size: 3rem;
-  font-family: "Bebas Neue", cursive;
-  letter-spacing: 2px;
-}
-@media only screen and (min-width: 576px) {
-  .image-banner__heading {
-    font-size: 4rem;
-  }
-}
-.image-banner__btn {
-  font-weight: bold;
-  color: var(--clr-white) !important;
-  border-color: var(--clr-white) !important;
-  background-color: transparent !important;
-}
-.image-banner__btn:hover {
-  color: var(--clr-white) !important;
-  border-color: var(--clr-accent) !important;
-  background-color: var(--clr-accent) !important;
+  letter-spacing: 4px;
 }
 
 .image-with-text {
