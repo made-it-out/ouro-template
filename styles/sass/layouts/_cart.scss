@@ -2,7 +2,6 @@
 
 .cart {
     padding: 4rem 0 2rem;
-    color: var(--color-cart-text);
 
     &__top {
         display: flex;
@@ -17,7 +16,7 @@
         width: 100%;
         margin: 0 auto 2rem;
         padding-bottom: 2rem;
-        border-bottom: 1px solid var(--color-cart-border);
+        border-bottom: 1px solid var(--color-light-grey);
         border-spacing: 0;
     }
 
@@ -25,11 +24,10 @@
         display: flex;
         justify-content: space-between;
         opacity: .7;
-        font-size: .7rem;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding-bottom: 1rem;
-        border-bottom: 1px solid var(--color-cart-border);
+        border-bottom: 1px solid var(--color-light-grey);
 
         @include a.mq-min(768px) {
             display: table-row;
@@ -38,7 +36,7 @@
 
     &__header {
         @include a.mq-min(768px) {
-            border-bottom: 1px solid var(--color-cart-border);
+            border-bottom: 1px solid var(--color-light-grey);
             padding-bottom: 1rem;
 
             &:not(:first-child){
@@ -160,7 +158,8 @@
         display: flex;
         align-items: center;
         gap: .5rem;
-        border: 1px solid var(--color-cart-border);
+        padding: 0 .5rem;
+        border: 1px solid var(--color-black);
         width: fit-content;
 
         button {
@@ -183,7 +182,6 @@
         pointer-events: none;
         width: 40px;
         text-align: center;
-        color: var(--color-quantity-number);
 
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button{
@@ -194,7 +192,7 @@
     }
 
     &__product-quantity-label {
-        font-weight: 600;
+        font-weight: 500;
         @include a.mq-min(768px) {
             display: none;
         }
@@ -210,7 +208,7 @@
         @include a.mq-min(768px) {
             align-items: flex-end;
 
-            button[name="checkout"]{
+            .btn{
                 width: 300px;
             }
         }

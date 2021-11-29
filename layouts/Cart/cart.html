@@ -1,91 +1,124 @@
 <!-- Start Cart -->
 <div class="cart">
-    <div class="cart__top">
-        <h2 class="cart__title">Your cart</h2>
-        <a href="#" class="cart__return-btn cart__return-btn--underline cart__return-btn--left-arrow">
-            <i class="fas fa-chevron-left"></i>
-            <span>Continue shopping</span>
-            <i class="fas fa-chevron-right"></i>
-        </a>
-    </div>
+    <div class="cart__container container">
+        <div class="cart__top">
+            <h1 class="cart__heading heading">Your cart</h1>
 
-    <table>
-        <thead class="cart__headings">
-            <tr>
-                <th class="cart__product-heading" colSpan="2">Product</th>
-                <th class="cart__price-heading">Price</th>
-                <th class="cart__quantity-heading">Quantity</th>
-                <th class="cart__total-heading">Total</th>
-            </tr>
-        </thead>
-        <tbody class="cart__products">
-            <tr class="cart__product">
-                <td class="cart__product-img-container"><img
-                        src="/assets/mic-7-b.png"
-                        alt="" class="cart__product-img" /></td>
-                <td class="cart__product-details">
-                    <p class="cart__product-name">&quot;Voice of God&quot; Microphone</p>
-                    <p class="cart__product-variant">Size: XL</p>
-                </td>
-                <td class="cart__product-price"><span>$</span><span
-                        class="cart__product-price-number">50.10</span></td>
-                <td class="cart__product-quantity-container">
-                    <label for="product-quantity">Quantity</label>
-                    <div class="cart__product-quantity">
-                        <button class="cart__product-quantity-minus"><i class="fas fa-minus"></i></button>
-                        <input type="text" name="product-quantity" class="cart__product-quantity-picker"
-                            value="1" />
-                        <button class="cart__product-quantity-plus"><i class="fas fa-plus"></i></button>
-                    </div>
-                </td>
-                <td class="cart__product-totals">
-                    <p class="cart__product-price-total"><span>$</span><span
-                            class="cart__product-total-number">50.10</span></p>
-                    <a href="#" class="cart__product-remove-btn"><i class="fas fa-trash"></i></a>
-                </td>
-            </tr>
-
-            <tr class="cart__product">
-                <td class="cart__product-img-container"><img
-                        src="/assets/mic-9-c.png"
-                        alt="" class="cart__product-img" /></td>
-                <td class="cart__product-details">
-                    <p class="cart__product-name">Gold Microphone</p>
-                    <p class="cart__product-variant">Size: M</p>
-                </td>
-                <td class="cart__product-price"><span>$</span><span
-                        class="cart__product-price-number">120.00</span></td>
-                <td class="cart__product-quantity-container">
-                    <label for="product-quantity">Quantity</label>
-                    <div class="cart__product-quantity">
-                        <button class="cart__product-quantity-minus"><i class="fas fa-minus"></i></button>
-                        <input type="text" name="product-quantity" class="cart__product-quantity-picker"
-                            value="1" />
-                        <button class="cart__product-quantity-plus"><i class="fas fa-plus"></i></button>
-                    </div>
-                </td>
-                <td class="cart__product-totals">
-                    <p class="cart__product-price-total"><span>$</span><span
-                            class="cart__product-total-number">120.00</span></p>
-                    <a href="#" class="cart__product-remove-btn"><i class="fas fa-trash"></i></a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    <div class="cart__subtotal">
-        <div class="cart__totals">
-            <h3 class="cart__subtotal-heading">Subtotal</h3>
-            <span class="cart__subtotal-amount"><span>$</span><span
-                    class="cart__subtotal-number">170.10</span><span>USD</span></span>
+            <a href="/pages/shop/collection.html" class="btn btn--primary btn--underline btn--left-arrow">
+                <i class="fas fa-chevron-left"></i>
+                <span>Continue shopping</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
         </div>
-        <p class="cart__subtotal-disclaimer">Taxes and shipping calculated at checkout</p>
-        <a href="/pages/shop/checkout.html" class="cart__checkout-btn cart__checkout-btn--opacity-decrease">
-            <i class="fas fa-chevron-left"></i>
-            <span>Check out</span>
-            <i class="fas fa-chevron-right"></i>
-        </a>
+
+        <table class="cart__table">
+            <thead class="cart__head">
+                <tr class="cart__headers small">
+                    <th class="cart__header cart__header--product" colspan="2">Product</th>
+                    <th class="cart__header cart__header--price">Price</th>
+                    <th class="cart__header cart__header--quantity">Quantity</th>
+                    <th class="cart__header cart__header--total">Total</th>
+                </tr>
+            </thead>
+            <tbody class="cart__products">
+                <tr class="cart__product">
+                    <td class="cart__product-img-container">
+                        <img src="/assets/mic-6-a.png" alt="" loading="lazy" class="cart__product-img" />
+                    </td>
+
+                    <td class="cart__product-details">
+                        <a class="cart__product-title subheading">Classic Microphone</a>
+                        <div class="cart__product-options">
+                            <p class="cart__product-option small">
+                                Size: Small
+                            </p>
+                            <p class="cart__product-option small">
+                                Color: Chrome
+                            </p>
+                        </div>
+                    </td>
+
+                    <td class="cart__product-price"><span>$99.99</span>
+                    </td>
+
+                    <td class="cart__product-quantity-container">
+                        <label for="quantity-1" class="cart__product-quantity-label body">Quantity</label>
+                        <div class="cart__product-quantity">
+                            <button type="button" name="minus" class="cart__product-quantity-minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" tabindex="-1" name="quantity" id="quantity-1" value="1"
+                                class="cart__product-quantity-input body" />
+                            <button type="button" name="plus" class="cart__product-quantity-plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </td>
+
+                    <td class="cart__product-totals">
+                        <p class="cart__product-price-total">$99.99</p>
+
+                        <button class="cart__product-remove-btn body"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                <tr class="cart__product">
+                    <td class="cart__product-img-container">
+                        <img src="/assets/mic-3-c.png" alt="" loading="lazy" class="cart__product-img" />
+                    </td>
+
+                    <td class="cart__product-details">
+                        <a class="cart__product-title subheading">Studio Microphone</a>
+                        <div class="cart__product-options">
+                            <p class="cart__product-option small">
+                                Size: Medium
+                            </p>
+                            <p class="cart__product-option small">
+                                Color: Black
+                            </p>
+                        </div>
+                    </td>
+
+                    <td class="cart__product-price"><span>$99.99</span>
+                    </td>
+
+                    <td class="cart__product-quantity-container">
+                        <label for="quantity-2" class="cart__product-quantity-label body">Quantity</label>
+                        <div class="cart__product-quantity">
+                            <button type="button" name="minus" class="cart__product-quantity-minus">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" tabindex="-1" name="quantity" id="quantity-2" value="1"
+                                class="cart__product-quantity-input body" />
+                            <button type="button" name="plus" class="cart__product-quantity-plus">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </td>
+
+                    <td class="cart__product-totals">
+                        <p class="cart__product-price-total">$99.99</p>
+
+                        <button class="cart__product-remove-btn body"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="cart__subtotal">
+            <div class="cart__totals">
+                <h2 class="cart__subtotal-heading body">Subtotal</h2>
+                <span class="cart__subtotal-amount">$199.98</span>
+            </div>
+            <p class="cart__subtotal-disclaimer small">Taxes and shipping calculated at checkout</p>
+
+            <a href="/pages/shop/checkout.html" class="btn btn--primary btn--color-swap">
+                <i class="fas fa-chevron-left"></i>
+                <span>Check out</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
     </div>
 </div>
 <!-- End Cart -->

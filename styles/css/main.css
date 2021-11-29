@@ -546,7 +546,6 @@ a {
 
 .cart {
   padding: 4rem 0 2rem;
-  color: var(--color-cart-text);
 }
 .cart__top {
   display: flex;
@@ -560,18 +559,17 @@ a {
   width: 100%;
   margin: 0 auto 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid var(--color-cart-border);
+  border-bottom: 1px solid var(--color-light-grey);
   border-spacing: 0;
 }
 .cart__headers {
   display: flex;
   justify-content: space-between;
   opacity: 0.7;
-  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-cart-border);
+  border-bottom: 1px solid var(--color-light-grey);
 }
 @media only screen and (min-width: 768px) {
   .cart__headers {
@@ -580,7 +578,7 @@ a {
 }
 @media only screen and (min-width: 768px) {
   .cart__header {
-    border-bottom: 1px solid var(--color-cart-border);
+    border-bottom: 1px solid var(--color-light-grey);
     padding-bottom: 1rem;
   }
   .cart__header:not(:first-child) {
@@ -688,7 +686,8 @@ a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid var(--color-cart-border);
+  padding: 0 0.5rem;
+  border: 1px solid var(--color-black);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -710,7 +709,6 @@ a {
   pointer-events: none;
   width: 40px;
   text-align: center;
-  color: var(--color-quantity-number);
   -moz-appearance: textfield;
 }
 .cart__product-quantity-input::-webkit-outer-spin-button, .cart__product-quantity-input::-webkit-inner-spin-button {
@@ -718,7 +716,7 @@ a {
   margin: 0;
 }
 .cart__product-quantity-label {
-  font-weight: 600;
+  font-weight: 500;
 }
 @media only screen and (min-width: 768px) {
   .cart__product-quantity-label {
@@ -736,7 +734,7 @@ a {
   .cart__subtotal {
     align-items: flex-end;
   }
-  .cart__subtotal button[name=checkout] {
+  .cart__subtotal .btn {
     width: 300px;
   }
 }
@@ -4032,12 +4030,11 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   padding: 1rem 1rem 0.5rem 1rem;
   padding: 1em 1.7em;
   outline: none;
-  color: #000000;
-  border: 1px solid var(--color-input-border);
+  border: 1px solid var(--color-black);
   border-radius: 4px;
 }
 .text-field__input:focus {
-  border-color: var(--color-input-border-focus);
+  border-color: var(--color-primary);
 }
 .text-field__textarea {
   height: 200px;
