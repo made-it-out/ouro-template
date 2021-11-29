@@ -23,6 +23,7 @@
         width: 100%;
         height: 100%;
         transition: all 1000ms ease-in-out;
+        color: var(--color-white);
 
         &--active{
             transform: translateX(0);
@@ -37,6 +38,7 @@
             width: 100%;
             height: 100%;
             z-index: 2;
+            background-color: rgba(0,0,0,0.5);
         }
         &-img-container{
             position: absolute;
@@ -102,12 +104,6 @@
                 align-items: flex-end;
             }
         }
-        &-heading{
-            padding: .5rem;
-        }
-        &-subheading{
-            padding: .5rem;
-        }
 
     }
     &__indicators{
@@ -126,14 +122,14 @@
         height: 12px;
         width: 12px;
         border-radius: 50%;
-        background-color: var(--clr-white);
+        background-color: var(--color-white);
         cursor: pointer;
         transition: all 300ms ease-in-out;
     
         &--active{
             height: 15px;
             width: 15px;
-            background-color: var(--clr-black);
+            background-color: var(--color-black);
         }
     }
 }

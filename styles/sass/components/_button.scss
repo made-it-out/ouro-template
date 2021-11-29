@@ -107,6 +107,51 @@
             }
         }
     }
+    &--banner{
+        &.btn--color-swap{
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-black);
+    
+            &:hover, &:focus{
+                color: var(--color-black);
+                background-color: var(--color-white);
+            }            
+        }
+        &.btn--grow{
+            border: none;
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-black);
+            &:hover, &:focus{
+                transform: scale(1.05);
+            }
+        }
+        &.btn--underline{
+            background-color: transparent;
+            color: var(--color-white);
+            border: none;
+            span{
+                border-bottom: 1px solid var(--color-white);
+            }
+            &:hover, &:focus{
+                color: var(--color-light-grey);
+            span{
+                border-bottom: 1px solid var(--color-light-grey);
+            }
+            }
+        }
+        &.btn--opacity-decrease{
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-black);
+            border: none;
+            transition: all 100ms ease-in-out;
+            &:hover, &:focus{
+                opacity: 0.7;
+            }
+        }
+    }
     &--danger{
 
     }
