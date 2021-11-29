@@ -13,57 +13,109 @@
         cursor: not-allowed;
         opacity: .5;
     }
+    &--primary{
+        &.btn--color-swap{
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+    
+            &:hover, &:focus{
+                color: var(--color-primary);
+                background-color: var(--color-white);
+                border-color: var(--color-primary);
+            }            
+        }
+        &.btn--grow{
+            border: none;
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-primary);
+            &:hover, &:focus{
+                transform: scale(1.05);
+            }
+        }
+        &.btn--underline{
+            background-color: transparent;
+            color: var(--color-black);
+            border: none;
+            span{
+                border-bottom: 1px solid var(--color-black);
+            }
+            &:hover, &:focus{
+                color: var(--color-primary);
+            span{
+                border-bottom: 1px solid var(--color-primary);
+            }
+            }
+        }
+        &.btn--opacity-decrease{
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-primary);
+            border: none;
+            transition: all 100ms ease-in-out;
+            &:hover, &:focus{
+                opacity: 0.7;
+            }
+        }
+    }
+    &--secondary{
+        &.btn--color-swap{
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-black);
+            border: 2px solid var(--color-black);
+    
+            &:hover, &:focus{
+                color: var(--color-black);
+                background-color: var(--color-white);
+                border-color: var(--color-black);
+            }            
+        }
+        &.btn--grow{
+            border: none;
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-black);
+            &:hover, &:focus{
+                transform: scale(1.05);
+            }
+        }
+        &.btn--underline{
+            background-color: transparent;
+            color: var(--color-black);
+            border: none;
+            span{
+                border-bottom: 1px solid var(--color-black);
+            }
+            &:hover, &:focus{
+                color: var(--color-black);
+            span{
+                border-bottom: 1px solid var(--color-black);
+            }
+            }
+        }
+        &.btn--opacity-decrease{
+            padding: 1em 1.7em;
+            color: var(--color-white);
+            background-color: var(--color-black);
+            border: none;
+            transition: all 100ms ease-in-out;
+            &:hover, &:focus{
+                opacity: 0.7;
+            }
+        }
+    }
+    &--danger{
+
+    }
     .fa-chevron-left,
     .fa-chevron-right{
         display: none;
         transition: left 300ms ease-in-out, right 300ms ease-in-out;
     }
 
-    &--color-swap{
-        padding: 1em 1.7em;
-        color: var(--color-text);
-        background-color: var(--color-bg);
-        border: 2px solid var(--color-border);
-
-        &:hover, &:focus{
-            color: var(--color-text-hover);
-            background-color: var(--color-bg-hover);
-            border-color: var(--color-border-hover);
-        }            
-    }
-    &--grow{
-        border: none;
-        padding: 1em 1.7em;
-        color: var(--color-text);
-        background-color: var(--color-bg);
-        &:hover, &:focus{
-            transform: scale(1.05);
-        }
-    }
-    &--underline{
-        background-color: transparent;
-        color: var(--color-text);
-        border: none;
-        span{
-            border-bottom: 1px solid var(--color-text);
-        }
-        &:hover, &:focus{
-            color: var(--color-text-hover);
-        span{
-            border-bottom: 1px solid var(--color-text-hover);
-        }
-        }
-    }
-    &--opacity-decrease{
-        padding: 1em 1.7em;
-        color: var(--color-text);
-        background-color: var(--color-bg);
-        border: none;
-        transition: all 100ms ease-in-out;
-        &:hover, &:focus{
-            opacity: 0.7;
-        }
-    }
     &--left-arrow{
         .fa-chevron-left{
             display: inline-block;
