@@ -3416,9 +3416,12 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   }
 }
 .multicolumn {
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-  background-color: var(--clr-white);
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .multicolumn {
+    padding: 4rem 0;
+  }
 }
 .multicolumn--align-left .column {
   align-items: flex-start;
@@ -3428,34 +3431,23 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   align-items: center;
   text-align: center;
 }
-.multicolumn--align-center .column__date-and-author {
-  justify-content: center;
-}
-.multicolumn--align-center .column__btn {
-  margin: auto;
-}
 .multicolumn--align-right .column {
   align-items: flex-end;
   text-align: right;
 }
-.multicolumn--align-right .column__date-and-author {
-  justify-content: flex-end;
-}
-.multicolumn--align-right .column__btn {
-  margin-left: auto;
-}
 .multicolumn__heading {
-  letter-spacing: 1px;
   margin-bottom: 2rem;
-  color: var(--clr-black);
 }
 .multicolumn__btn {
-  margin: 2rem auto;
+  margin: auto;
 }
 
+.column {
+  margin-bottom: 2rem;
+}
 .column--no-img .column__inner-container {
-  border: 1px solid var(--clr-off-white);
-  background-color: var(--clr-x-light-grey);
+  border: 1px solid var(--color-light-grey);
+  background-color: var(--color-off-white);
   padding: 0.5rem;
 }
 .column__inner-container {
@@ -3465,7 +3457,6 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 1rem;
-  background-color: var(--clr-white);
 }
 .column__img-container {
   width: 100%;
@@ -3481,37 +3472,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
      object-position: center center;
 }
 .column__heading {
-  font-size: 1.3rem;
-  color: var(--clr-black);
-}
-.column__description {
-  color: var(--clr-black);
-}
-.column__date-and-author {
-  display: flex;
-  gap: 1rem;
-}
-.column__date {
-  color: var(--clr-black);
-  font-size: 0.8rem;
-  padding-right: 0.5rem;
-}
-.column__author {
-  position: relative;
-  color: var(--clr-black);
-  font-size: 0.8rem;
-  padding-left: 0.5rem;
-}
-.column__author--with-date::before {
-  position: absolute;
-  content: "";
-  border-radius: 50%;
-  height: 0.4rem;
-  width: 0.4rem;
-  background-color: var(--clr-black);
-  top: 50%;
-  left: -0.7rem;
-  transform: translateY(-50%);
+  font-weight: 600;
 }
 
 .email-signup {
