@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', init)
-document.addEventListener('shopify:section:load', init)
 
 function init() {
     const featuredProducts = document.querySelectorAll('.featured-product');

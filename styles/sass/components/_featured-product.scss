@@ -1,7 +1,11 @@
 @use '../abstracts'as a;
 
 .featured-product {
-    background-color: var(--color-bg);
+    padding: 2rem 0;
+
+    @include a.mq-min(768px){
+        padding: 4rem 0;
+    }
 
     &__container {
         @include a.mq-min(768px) {
@@ -37,12 +41,12 @@
 
         &--on-sale {
             background-color: var(--color-sale);
-            color:  var(--color-sale-badge-text);
+            color:  var(--color-white);
         }
 
         &--sold-out {
             background-color: var(--color-sold-out);
-            color: var(--color-sold-out-badge-text);
+            color: var(--color-white);
         }
     }
 
@@ -52,7 +56,7 @@
         opacity: 0;
         width: 100%;
         height: 100%;
-        padding: 1rem;
+        // padding: 1rem;
         transition: all 1000ms ease-in-out;
 
         &--active {
@@ -87,7 +91,7 @@
         width: 13px;
         border-radius: 50%;
         background-color: transparent;
-        border: 2px solid var(--color-indicator);
+        border: 2px solid var(--color-black);
         cursor: pointer;
 
         @include a.mq-min(768px) {
@@ -96,17 +100,16 @@
 
         &:focus {
             border-radius: unset;
-            background-color: var(--color-bg);
+            background-color: var(--color-black);
         }
 
         &--active {
-            background-color: var(--color-indicator);
+            background-color: var(--color-black);
         }
     }
 
     &__img-alternates {
         display: flex;
-        justify-content: center;
         align-items: center;
         margin: 1rem auto;
         gap: 1rem;
@@ -120,35 +123,39 @@
 
         @include a.mq-min(768px) {
             display: inline-block;
-            width: 120px;
-            height: 120px;
+            width: 115px;
+            height: 115px;
             object-fit: cover;
             object-position: center;
         }
 
         &:hover,
         &:focus {
-            outline: 2px solid var(--color-indicator);
+            outline: 2px solid var(--color-primary);
         }
 
         &--active {
             opacity: 1;
-            border: 2px solid var(--color-indicator);
+            border: 2px solid var(--color-primary);
         }
     }
 
     &__info-container {
-        padding: 1rem;
+        // padding: 1rem;
         width: 100%;
         height: 100%;
+
+        @include a.mq-min(768px){
+            padding-left: 2rem;
+        }
     }
     &__vendor{
-        color: var(--color-vendor);
+        color: var(--color-dark-grey);
     }
 
     &__title {
         margin: 1rem 0;
-        color: var(--color-title);
+        color: var(--color-black);
     }
 
     &__prices {
@@ -158,7 +165,7 @@
         margin: 1rem 0;
     }
     &__price{
-        color: var(--color-price);
+        color: var(--color-black);
     }
 
     &__compare-price {
@@ -182,7 +189,7 @@
 
     &__option-name {
         font-weight: bold;
-        color: var(--color-option);
+        color: var(--color-black);
     }
 
     &__variants {
@@ -202,9 +209,9 @@
         &-input {
             display: none;
             &:checked + .featured-product__variant-label{
-                background-color: var(--color-variant-selected-bg);
-                border-color: var(--color-variant-selected-bg);
-                color: var(--color-variant-selected);
+                background-color: var(--color-primary);
+                border-color: var(--color-primary);
+                color: var(--color-white);
             }
         }
 
@@ -216,10 +223,10 @@
             border-radius: 100vw;
             transition: all 200ms ease-in-out;
             cursor: pointer;
-            color: var(--color-variant);
-            border: 1px solid var(--color-variant);
+            color: var(--color-black);
+            border: 1px solid var(--color-black);
             &:focus{
-                outline: 3px solid var(--color-variant-selected-bg);
+                outline: 3px solid var(--color-primary);
             }
         }
     }
@@ -241,8 +248,8 @@
             padding: .4rem;
             border-radius: 50%;
             background-color: transparent;
-            border: 1px solid var(--color-quantity-button);
-            color: var(--color-quantity-button);
+            border: 1px solid var(--color-black);
+            color: var(--color-black);
             opacity: 0.7;
             transition: opacity 200ms ease-in-out;
 
@@ -254,7 +261,6 @@
 
     &__quantity-label {
         font-weight: bold;
-        color: var(--color-quantity-label);
     }
 
     &__quantity-input {
@@ -263,7 +269,7 @@
         pointer-events: none;
         width: 40px;
         text-align: center;
-        color: var(--color-quantity-number);
+        color: var(--color-primary);
 
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button{
