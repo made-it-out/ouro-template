@@ -2073,7 +2073,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 .btn--primary.btn--color-swap:hover, .btn--primary.btn--color-swap:focus {
   color: var(--color-primary);
-  background-color: var(--color-white);
+  background-color: transparent;
   border-color: var(--color-primary);
 }
 .btn--primary.btn--grow {
@@ -2117,7 +2117,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 .btn--secondary.btn--color-swap:hover, .btn--secondary.btn--color-swap:focus {
   color: var(--color-black);
-  background-color: var(--color-white);
+  background-color: transparent;
   border-color: var(--color-black);
 }
 .btn--secondary.btn--grow {
@@ -3517,6 +3517,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 
 .email-signup {
   width: 100%;
+  background-image: url("https://images.pexels.com/photos/1003124/pexels-photo-1003124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -3533,11 +3534,12 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 .email-signup__heading {
   text-align: center;
-  color: var(--color-heading);
+  color: var(--color-white);
+  font-weight: 600;
 }
 .email-signup__body {
   text-align: center;
-  color: var(--color-body);
+  color: var(--color-white);
 }
 .email-signup__form {
   display: flex;
@@ -3548,7 +3550,16 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 .email-signup__message {
   margin-top: 0.5rem;
-  color: var(--color-body);
+  display: none;
+}
+.email-signup__message--success {
+  color: var(--color-success);
+}
+.email-signup__message--error {
+  color: var(--color-error);
+}
+.email-signup__message--show {
+  display: block;
 }
 
 .order-history {
