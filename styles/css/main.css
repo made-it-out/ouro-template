@@ -69,17 +69,17 @@ a {
 }
 
 .xl-heading {
-  font-size: 3.5rem;
+  font-size: 2.2rem;
   font-family: var(--font-family-xl-heading);
 }
 @media screen and (min-width: 768px) {
   .xl-heading {
-    font-size: 5.5rem;
+    font-size: 3.5rem;
   }
 }
 @media screen and (min-width: 992px) {
   .xl-heading {
-    font-size: 7.5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -2509,7 +2509,6 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   }
 }
 .navbar__link {
-  font-size: 1.3rem;
   margin: 2rem 0;
   z-index: 0;
 }
@@ -2651,7 +2650,6 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 .navbar__submenu-name {
   padding: 0.5rem;
-  font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
 }
@@ -2766,7 +2764,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   position: relative;
   top: 0;
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 992px) {
   .double-image-banner__left, .double-image-banner__right {
     width: 50%;
     position: absolute;
@@ -2822,6 +2820,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   text-align: center;
   padding: 1rem;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 @media only screen and (min-width: 576px) {
   .double-image-banner__content-container {
@@ -2835,14 +2834,9 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   gap: 1rem;
 }
 .double-image-banner__heading {
-  font-size: 2.5rem;
-  font-family: "Bebas Neue", cursive;
   letter-spacing: 2px;
-}
-@media only screen and (min-width: 576px) {
-  .double-image-banner__heading {
-    font-size: 4rem;
-  }
+  color: var(--color-white);
+  word-wrap: break-word;
 }
 
 .featured-product {
