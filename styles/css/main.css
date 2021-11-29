@@ -16,6 +16,7 @@ html {
 }
 
 body {
+  width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   display: flex;
@@ -2058,7 +2059,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  transition: all 300ms ease-in-out;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
   text-decoration: none;
 }
 .btn--disabled {
@@ -3358,20 +3359,20 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   justify-content: center;
   flex-basis: 50%;
   flex-shrink: 0;
-  background-color: var(--color-bg);
+  background-color: var(--color-black);
 }
 .modal__right-img-container {
   margin-bottom: 2rem;
-  max-width: 200px;
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
+  max-width: 250px;
   overflow: hidden;
 }
 .modal__right-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 .modal__content {
   display: flex;
@@ -3379,12 +3380,10 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   text-align: center;
   gap: 1rem;
   margin-bottom: 2rem;
+  color: var(--color-white);
 }
 .modal__heading {
-  color: var(--color-heading);
-}
-.modal__text {
-  color: var(--color-text);
+  font-weight: 600;
 }
 .modal__overlay {
   position: fixed;
@@ -3396,7 +3395,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   z-index: 3;
 }
 .modal__close-btn {
-  color: var(--color-text);
+  color: var(--color-white);
   position: absolute;
   right: 1rem;
   top: 1rem;
