@@ -1049,41 +1049,45 @@ a {
   background-color: var(--clr-x-light-grey);
 }
 
-.login-page {
+.login {
   padding: 2rem 0;
-  width: 100%;
-  background-color: var(--clr-white);
 }
-.login-page__container {
+@media only screen and (min-width: 768px) {
+  .login {
+    padding: 4rem 0;
+  }
+}
+.login__container {
   margin: auto;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
   gap: 1rem;
 }
-.login-page__heading {
-  font-size: 1.8rem;
+.login__heading {
   font-weight: 500;
   text-align: center;
-  color: var(--clr-black);
 }
-.login-page__form {
+.login__form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
   gap: 1rem;
   justify-content: center;
-  align-items: center;
 }
-.login-page__text-field {
+.login__text-field {
   width: 100%;
 }
-.login-page__forgot-password {
-  align-self: flex-start;
+.login__buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.login__submit {
+  width: 100% !important;
 }
 
 .not-found {
