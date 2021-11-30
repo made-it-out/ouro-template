@@ -1,7 +1,6 @@
 @use '../abstracts/' as a;
 
 .collection-list{
-    background-color: var(--color-white);
     padding: 2rem 0;
 
     @include a.mq-min(768px){
@@ -9,7 +8,6 @@
     }
     &__heading{
         margin-bottom: 2rem;
-        color: var(--color-black);
     }
 }
 .featured-collection{
