@@ -145,17 +145,6 @@ a {
   }
 }
 
-.element__title, .element__subtitle {
-  margin: 2rem auto;
-  text-align: center;
-}
-.element__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 2rem auto;
-}
-
 .about-page .image-banner {
   margin-bottom: 2rem;
 }
@@ -1013,19 +1002,15 @@ a {
   color: var(--clr-accent);
 }
 
-.element-page__heading {
+.element__title, .element__subtitle {
   margin: 2rem auto;
   text-align: center;
 }
-.element-page__subheading {
-  margin: 2rem auto;
-  text-align: center;
-}
-.element-page__container {
+.element__container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  margin: 2rem auto;
 }
 
 .faq {
