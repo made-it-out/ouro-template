@@ -209,8 +209,12 @@ a {
 }
 
 .addresses {
-  background-color: var(--clr-white);
-  padding: 4rem 0;
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .addresses {
+    padding: 4rem 0;
+  }
 }
 .addresses__top {
   display: flex;
@@ -220,7 +224,7 @@ a {
   margin-bottom: 2rem;
 }
 .addresses__heading {
-  color: var(--clr-black);
+  font-weight: 600;
 }
 .addresses__address-container {
   display: flex;
@@ -1799,43 +1803,25 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   align-items: center;
   margin-bottom: 2rem;
   gap: 1rem;
+  max-width: 400px;
+}
+.address__heading {
+  font-weight: 600;
 }
 .address__table {
-  background-color: var(--clr-off-white);
+  background-color: var(--color-off-white);
   border-collapse: collapse;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.23);
 }
 .address__cell {
   padding: 1rem;
 }
-@media only screen and (min-width: 768px) {
-  .address__cell {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 300px;
-  }
-}
 .address__cell--key {
-  color: var(--clr-dark-grey);
+  color: var(--color-dark-grey);
 }
-.address__cell--value {
-  color: var(--clr-black);
-}
-.address__btns {
+.address__buttons {
   display: flex;
   gap: 2rem;
-}
-.address__btn--edit {
-  background-color: var(--clr-black) !important;
-}
-.address__btn--delete {
-  color: var(--clr-red) !important;
-  border-color: var(--clr-red) !important;
-}
-.address__btn--delete:hover {
-  color: var(--clr-white) !important;
-  background-color: var(--clr-red) !important;
 }
 
 .btn {
@@ -1984,6 +1970,50 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   transition: all 100ms ease-in-out;
 }
 .btn--banner.btn--opacity-decrease:hover, .btn--banner.btn--opacity-decrease:focus {
+  opacity: 0.7;
+}
+.btn--danger.btn--color-swap {
+  padding: 1em 1.7em;
+  color: var(--color-white);
+  background-color: var(--color-error);
+  border: 2px solid var(--color-error);
+}
+.btn--danger.btn--color-swap:hover, .btn--danger.btn--color-swap:focus {
+  color: var(--color-error);
+  background-color: transparent;
+  border-color: var(--color-error);
+}
+.btn--danger.btn--grow {
+  border: none;
+  padding: 1em 1.7em;
+  color: var(--color-white);
+  background-color: var(--color-error);
+}
+.btn--danger.btn--grow:hover, .btn--danger.btn--grow:focus {
+  transform: scale(1.05);
+}
+.btn--danger.btn--underline {
+  background-color: transparent;
+  color: var(--color-black);
+  border: none;
+}
+.btn--danger.btn--underline span {
+  border-bottom: 1px solid var(--color-black);
+}
+.btn--danger.btn--underline:hover, .btn--danger.btn--underline:focus {
+  color: var(--color-error);
+}
+.btn--danger.btn--underline:hover span, .btn--danger.btn--underline:focus span {
+  border-bottom: 1px solid var(--color-error);
+}
+.btn--danger.btn--opacity-decrease {
+  padding: 1em 1.7em;
+  color: var(--color-white);
+  background-color: var(--color-error);
+  border: none;
+  transition: all 100ms ease-in-out;
+}
+.btn--danger.btn--opacity-decrease:hover, .btn--danger.btn--opacity-decrease:focus {
   opacity: 0.7;
 }
 .btn .fa-chevron-left,
