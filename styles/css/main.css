@@ -193,12 +193,15 @@ a {
 
 .account {
   padding: 2rem 0;
-  background-color: var(--clr-white);
+}
+@media only screen and (min-width: 768px) {
+  .account {
+    padding: 4rem 0;
+  }
 }
 .account__heading {
-  letter-spacing: 1px;
-  color: var(--clr-black);
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 .account__column {
   margin-bottom: 2rem;
@@ -3340,13 +3343,9 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   display: block;
 }
 
-.order-history {
-  background-color: var(--clr-white);
-}
 .order-history__heading {
-  letter-spacing: 1px;
-  color: var(--clr-black);
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 .order-history__details {
   margin-bottom: 2rem;
@@ -3357,12 +3356,11 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 @media only screen and (min-width: 768px) {
   .order-history__table {
-    border: 1px solid var(--clr-light-grey);
+    border: 1px solid var(--color-mid-grey);
   }
 }
 .order-history__head {
-  color: var(--clr-black);
-  background-color: var(--clr-off-white);
+  background-color: var(--color-off-white);
   display: none;
 }
 @media only screen and (min-width: 768px) {
@@ -3370,11 +3368,11 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
     display: table-header-group;
   }
 }
+.order-history__header {
+  font-weight: 600;
+}
 .order-history__header, .order-history__cell {
   padding: 1rem;
-}
-.order-history__orders {
-  background-color: var(--clr-white);
 }
 .order-history__order {
   display: flex;
@@ -3395,9 +3393,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   }
 }
 .order-history__key {
-  text-align: left;
-  font-weight: bold;
-  color: var(--clr-black);
+  font-weight: 600;
 }
 @media only screen and (min-width: 768px) {
   .order-history__key {
@@ -3406,10 +3402,9 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 }
 .order-history__value {
   text-align: right;
-  color: var(--clr-black);
 }
 .order-history__headers {
-  border-bottom: 1px solid var(--clr-light-grey);
+  border-bottom: 1px solid var(--color-mid-grey);
 }
 @media only screen and (min-width: 768px) {
   .order-history__header:nth-child(1), .order-history__order .order-history__cell:nth-child(1) {
@@ -3422,10 +3417,10 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   }
 }
 .order-history__order {
-  border-bottom: 1px solid var(--clr-light-grey);
+  border-bottom: 1px solid var(--color-mid-grey);
 }
 .order-history__order:nth-child(1) {
-  border-top: 1px solid var(--clr-light-grey);
+  border-top: 1px solid var(--color-mid-grey);
 }
 .order-history__order .order-history__cell:nth-child(1) .order-history__value {
   text-decoration: underline;

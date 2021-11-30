@@ -1,11 +1,15 @@
+@use '../abstracts/' as a;
+
 .account{
     padding: 2rem 0;
-    background-color: var(--clr-white);
+
+    @include a.mq-min(768px){
+        padding: 4rem 0;
+    }
 
     &__heading{
-        letter-spacing: 1px;
-        color: var(--clr-black);
         margin-bottom: 1rem;
+        font-weight: 600;
     }
     &__column{
         margin-bottom: 2rem;
