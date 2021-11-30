@@ -9,6 +9,7 @@
     color: var(--color-black);
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.23);
     padding: var(--header-padding-v) 2rem;
+    z-index: 2;
 
     &--navbar-shown,
     &--navbar-shown .header--5 .header__container {
