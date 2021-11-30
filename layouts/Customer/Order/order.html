@@ -1,18 +1,18 @@
 <!-- Start Order -->
 <div class="order">
     <div class="container">
-        <a href="/pages/account.html"
-            class="order__return-btn order__return-btn--underline order__return-btn--left-arrow">
+        <a href="/pages/customer/account.html" class="btn btn--primary btn--underline btn--left-arrow">
             <i class="fas fa-chevron-left"></i>
-            <span>Return to account details</span>
+            <span>Account details</span>
             <i class="fas fa-chevron-right"></i>
         </a>
-        <h1 class="order__number">Order #1234</h1>
-        <p class="order__date">Placed on September 5, 2021 at 3:05 pm</p>
+
+        <h1 class="order__heading heading">Order #1234</h1>
+        <p class="order__date">Placed on <span class="placeholder-date">Dec 1, 2021</span></p>
 
         <div class="order__details">
-            <table>
-                <thead>
+            <table class="order__table">
+                <thead class="order__head">
                     <tr class="order__headers">
                         <th class="order__header">Product</th>
                         <th class="order__header">SKU</th>
@@ -21,150 +21,176 @@
                         <th class="order__header">Total</th>
                     </tr>
                 </thead>
+
                 <tbody class="order__products">
                     <tr class="order__product">
-                        <td>
-                            <span class="before">Product</span>
-                            <span class="value">Microphone</span>
+                        <td class="order__cell">
+                            <span class="order__key">Product</span>
+                            <span class="order__value">Classic Microphone</span>
                         </td>
-                        <td>
-                            <span class="before">SKU</span>
-                            <span class="value">123</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">SKU</span>
+                            <span class="order__value">123</span>
                         </td>
-                        <td>
-                            <span class="before">Price</span>
-                            <span class="value">$200.00</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">Price</span>
+                            <span class="order__value">$99.99</span>
                         </td>
-                        <td>
-                            <span class="before">Quantity</span>
-                            <span class="value">1</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">Quantity</span>
+                            <span class="order__value">1</span>
                         </td>
-                        <td>
-                            <span class="before">Total</span>
-                            <span class="value">$200.00</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">Total</span>
+                            <span class="order__value">$99.99</span>
                         </td>
                     </tr>
+
                     <tr class="order__product">
-                        <td>
-                            <span class="before">Product</span>
-                            <span class="value">Speaker</span>
+                        <td class="order__cell">
+                            <span class="order__key">Product</span>
+                            <span class="order__value">Studio Microphone</span>
                         </td>
-                        <td>
-                            <span class="before">SKU</span>
-                            <span class="value">456</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">SKU</span>
+                            <span class="order__value">456</span>
                         </td>
-                        <td>
-                            <span class="before">Price</span>
-                            <span class="value">$150.00</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">Price</span>
+                            <span class="order__value">$99.99</span>
                         </td>
-                        <td>
-                            <span class="before">Quantity</span>
-                            <span class="value">1</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">Quantity</span>
+                            <span class="order__value">1</span>
                         </td>
-                        <td>
-                            <span class="before">Total</span>
-                            <span class="value">$150.00</span>
+
+                        <td class="order__cell">
+                            <span class="order__key">Total</span>
+                            <span class="order__value">$99.99</span>
                         </td>
                     </tr>
                 </tbody>
-                <tfoot class="order__totals">
+
+                <tfoot class="order__foot">
                     <tr class="order__subtotal">
-                        <td colspan="4">Subtotal</td>
-                        <td>$350.00</td>
+                        <td class="order__cell" colspan="5">
+                            <div class="order__pair">
+                                <span class="order__key">Subtotal</span>
+                                <span class="order__value">$199.98</span>
+                            </div>
+                        </td>
                     </tr>
+
                     <tr class="order__shipping-total">
-                        <td colspan="4">Shipping (USPS Priority Mail)</td>
-                        <td>$12.49</td>
+                        <td class="order__cell" colspan="5">
+                            <div class="order__pair">
+                                <span class="order__key">Shipping (Free)</span>
+                                <span class="order__value">$0.00</span>
+                            </div>
+                        </td>
                     </tr>
-                    <tr class="order__total">
-                        <td colspan="4">Total</td>
-                        <td>$362.49 USD</td>
+
+                    <tr class="order__total subheading">
+                        <td class="order__cell" colspan="5">
+                            <div class="order__pair">
+                                <span class="order__key">Total</span>
+                                <span class="order__value">$199.98 USD</span>
+                            </div>
+                        </td>
                     </tr>
                 </tfoot>
             </table>
         </div>
 
-        <div class="order__addresses">
-            <div class="row">
-                <div class="order__billing-address col-md-6">
-                    <h2>Billing Address</h2>
-                    <p class="order__status">Payment Status: <span>Paid</span></p>
-                    <div class="addresses">
-                        <div class="addresses__address">
-                            <table>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Billy Bob</td>
-                                </tr>
-                                <tr>
-                                    <td>Address</td>
-                                    <td>74 South Temple Rd.</td>
-                                </tr>
-                                <tr>
-                                    <td>City</td>
-                                    <td>Warren</td>
-                                </tr>
-                                <tr>
-                                    <td>State</td>
-                                    <td>MI</td>
-                                </tr>
-                                <tr>
-                                    <td>Postal Code</td>
-                                    <td>48089</td>
-                                </tr>
-                                <tr>
-                                    <td>Country</td>
-                                    <td>USA</td>
-                                </tr>
-                                <tr>
-                                    <td>Phone</td>
-                                    <td>555-555-5555</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+        <div class="order__addresses row">
+            <div class="order__address-container col-md-6">
+                <!-- Start Address -->
+                <div class="address">
+                    <h2 class="address__heading subheading">Billing Address</h2>
+
+                    <p class="address__status-message">Payment Status: <span class="address__status address__status--success">Paid</span></p>
+
+                    <table class="address__table">
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Name</td>
+                            <td class="address__cell address__cell--value">John Doe</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Address</td>
+                            <td class="address__cell address__cell--value">123 Main St</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">City</td>
+                            <td class="address__cell address__cell--value">Big City</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">State</td>
+                            <td class="address__cell address__cell--value">NY</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Postal Code</td>
+                            <td class="address__cell address__cell--value">10001</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Country</td>
+                            <td class="address__cell address__cell--value">USA</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Phone</td>
+                            <td class="address__cell address__cell--value">555-555-5555</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="order__shipping-address col-md-6">
-                    <h2>Shipping Address</h2>
-                    <p class="order__status">Fullfillment Status: <span>Fulfilled</span></p>
-                    <div class="addresses">
-                        <div class="addresses__address">
-                            <table>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Billy Bob</td>
-                                </tr>
-                                <tr>
-                                    <td>Address</td>
-                                    <td>74 South Temple Rd.</td>
-                                </tr>
-                                <tr>
-                                    <td>City</td>
-                                    <td>Warren</td>
-                                </tr>
-                                <tr>
-                                    <td>State</td>
-                                    <td>MI</td>
-                                </tr>
-                                <tr>
-                                    <td>Postal Code</td>
-                                    <td>48089</td>
-                                </tr>
-                                <tr>
-                                    <td>Country</td>
-                                    <td>USA</td>
-                                </tr>
-                                <tr>
-                                    <td>Phone</td>
-                                    <td>555-555-5555</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
+                <!-- End Address -->
+            </div>
+
+            <div class="order__address-container col-md-6">
+                <!-- Start Address -->
+                <div class="address">
+                    <h2 class="address__heading subheading">Shipping Address</h2>
+                    <p class="address__status-message">Fulfillment Status: <span class="address__status address__status--success">Fulfilled</span></p>
+
+                    <table class="address__table">
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Name</td>
+                            <td class="address__cell address__cell--value">John Doe</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Address</td>
+                            <td class="address__cell address__cell--value">123 Main St</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">City</td>
+                            <td class="address__cell address__cell--value">Big City</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">State</td>
+                            <td class="address__cell address__cell--value">NY</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Postal Code</td>
+                            <td class="address__cell address__cell--value">10001</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Country</td>
+                            <td class="address__cell address__cell--value">USA</td>
+                        </tr>
+                        <tr class="address__row">
+                            <td class="address__cell address__cell--key">Phone</td>
+                            <td class="address__cell address__cell--value">555-555-5555</td>
+                        </tr>
+                    </table>
                 </div>
+                <!-- End Address -->
             </div>
         </div>
     </div>
-
 </div>
 <!-- End Order -->
