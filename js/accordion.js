@@ -10,7 +10,7 @@ class AccordionComponent extends HTMLElement {
 
         this.activeItem = null;
         this.activeItems = [];
-        this.padding = 16;
+        this.padding = 24;
 
         this.items.forEach((item, index) => {
             const heading = item.querySelector('.accordion__heading');
@@ -61,7 +61,7 @@ class AccordionComponent extends HTMLElement {
 
             item.setAttribute('aria-expanded', 'false');
             item.classList.remove('active');
-            content.style.height = '0px';
+            content.style.maxHeight = '0px';
             content.style.padding = '0px';
         }
     }
@@ -70,8 +70,8 @@ class AccordionComponent extends HTMLElement {
 
         item.setAttribute('aria-expanded', 'true');
         item.classList.add('active');
-        // use scrollHeight in order to transition the height (unable to with 'auto')
-        content.style.height = `${content.scrollHeight + (this.padding * 2)}px`;
+        // use scrollHeight in order to transition the max-height (unable to with 'auto')
+        content.style.maxHeight = `${content.scrollHeight + (this.padding * 10)}px`;
         content.style.padding = `${this.padding}px`;
     }
 
