@@ -1587,72 +1587,89 @@ a {
   background-color: var(--color-white) !important;
 }
 
-.register-page {
+.register {
   padding: 2rem 0;
-  width: 100%;
-  background-color: var(--clr-white);
 }
-.register-page__container {
+@media only screen and (min-width: 768px) {
+  .register {
+    padding: 4rem 0;
+  }
+}
+.register__container {
   margin: auto;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
   gap: 1rem;
 }
-.register-page__heading {
-  font-size: 1.8rem;
-  text-align: center;
+.register__heading {
   font-weight: 500;
-  color: var(--clr-black);
+  text-align: center;
 }
-.register-page__form {
+.register__form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
   gap: 1rem;
   justify-content: center;
-  align-items: center;
 }
-.register-page__text-field {
+.register__text-field {
   width: 100%;
+}
+.register__buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.register__submit {
+  width: 100% !important;
 }
 
-.reset-password-page {
+.reset-password {
   padding: 2rem 0;
-  width: 100%;
-  background-color: var(--clr-white);
 }
-.reset-password-page__container {
+@media only screen and (min-width: 768px) {
+  .reset-password {
+    padding: 4rem 0;
+  }
+}
+.reset-password__container {
   margin: auto;
   max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
   gap: 1rem;
 }
-.reset-password-page__heading {
-  font-size: 1.8rem;
+.reset-password__heading {
   font-weight: 500;
   text-align: center;
-  color: var(--clr-black);
 }
-.reset-password-page__form {
+.reset-password__message {
+  text-align: center;
+}
+.reset-password__form {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
   gap: 1rem;
   justify-content: center;
-  align-items: center;
 }
-.reset-password-page__text-field {
+.reset-password__text-field {
   width: 100%;
+}
+.reset-password__buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.reset-password__submit {
+  width: 100% !important;
 }
 
 .search {
