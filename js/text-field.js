@@ -17,5 +17,10 @@ function init() {
         label.addEventListener('click', () => {
             input.focus();
         })
+
+        // If input already has a value
+        if(input.value.length > 0){
+            label.classList.add('text-field__label--up')
+        }
     })
 }

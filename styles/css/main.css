@@ -1503,10 +1503,12 @@ a {
 }
 
 .search {
-  width: 100%;
-  overflow-x: hidden;
-  padding: 4rem 0;
-  background-color: var(--clr-white);
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .search {
+    padding: 4rem 0;
+  }
 }
 .search__top {
   align-self: center;
@@ -1518,29 +1520,30 @@ a {
   margin-bottom: 1rem;
   padding: 0.5rem;
 }
-.search__heading {
-  color: var(--clr-black);
+@media only screen and (min-width: 768px) {
+  .search__filters-container {
+    padding-top: 3.8rem;
+  }
 }
-.search__filters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.5rem;
+.search__filters .accordion__heading {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-mid-grey);
+  color: var(--color-black);
+}
+.search__filters .accordion__heading::after, .search__filters .accordion__heading::before {
+  background-color: var(--color-black) !important;
+}
+.search__filters-list {
+  list-style: none;
+  padding-left: 0 !important;
 }
 .search__filter {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-.search__filter select {
-  padding: 0.5rem;
   cursor: pointer;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
 }
-.search__filter select:focus {
-  border-color: var(--clr-accent);
-}
-.search__message {
-  color: var(--clr-black);
+.search__filter:hover {
+  background-color: var(--color-light-grey);
 }
 .search__pagination {
   display: flex;
@@ -1548,17 +1551,15 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  color: var(--clr-black);
 }
 .search__page-number {
-  font-size: 1.2rem;
   cursor: pointer;
 }
 .search__page-number.current-page {
-  color: var(--clr-accent);
-  border-bottom: 2px solid var(--clr-accent);
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
 }
-.search__prev, .search__next {
+.search__next {
   cursor: pointer;
 }
 

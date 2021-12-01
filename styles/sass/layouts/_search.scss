@@ -1,9 +1,13 @@
-.search{
-    width: 100%;
-    overflow-x: hidden;
-    padding: 4rem 0;
-    background-color: var(--clr-white);
-    &__top{
+@use '../abstracts/'as a;
+
+.search {
+    padding: 2rem 0;
+
+    @include a.mq-min(768px) {
+        padding: 4rem 0;
+    }
+
+    &__top {
         align-self: center;
         text-align: center;
         display: flex;
@@ -13,51 +17,58 @@
         margin-bottom: 1rem;
         padding: .5rem;
     }
-    &__heading{
-        color: var(--clr-black);
+
+    &__filters-container {
+        @include a.mq-min(768px) {
+            padding-top: 3.8rem;
+        }
     }
-    &__filters{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 1.5rem;
-    }
-    &__filter{
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
 
+    &__filters {
+        .accordion__heading {
+            background-color: var(--color-white);
+            border-bottom: 1px solid var(--color-mid-grey);
+            color: var(--color-black);
 
-        select{
-            padding: .5rem;
-            cursor: pointer;
-
-            &:focus{
-                border-color: var(--clr-accent);
+            &::after,
+            &::before {
+                background-color: var(--color-black) !important;
             }
         }
     }
-    &__message{
-        color: var(--clr-black);
+
+    &__filters-list{
+        list-style: none;
+        padding-left: 0 !important;
     }
-    &__pagination{
+    &__filter {
+        cursor: pointer;
+        padding-left: 1rem;
+        margin-top: .5rem;
+
+        &:hover{
+            background-color: var(--color-light-grey);
+        }
+    }
+
+    &__pagination {
         display: flex;
         gap: 1rem;
         justify-content: center;
         align-items: center;
         margin-top: 1rem;
-        color: var(--clr-black);
     }
-    &__page-number{
-        font-size: 1.2rem;
+
+    &__page-number {
         cursor: pointer;
-        &.current-page{
-            color: var(--clr-accent);
-            border-bottom: 2px solid var(--clr-accent);
+
+        &.current-page {
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
         }
     }
-    &__prev,
-    &__next{
+
+    &__next {
         cursor: pointer;
     }
 }
