@@ -2926,6 +2926,9 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
     padding-right: 2rem;
   }
 }
+.image-with-text__heading {
+  font-weight: 600;
+}
 .image-with-text__text {
   color: var(--color-dark-grey);
 }
