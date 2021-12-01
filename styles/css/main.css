@@ -868,9 +868,7 @@ a {
 }
 
 .coming-soon {
-  padding-top: 4rem;
-  background-color: var(--clr-white);
-  color: var(--clr-black);
+  padding-top: 2rem;
 }
 .coming-soon__container {
   width: -webkit-fit-content;
@@ -879,22 +877,23 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  text-align: center;
 }
 .coming-soon__logo-container {
-  max-width: 225px;
+  max-width: 450px;
 }
 .coming-soon__logo {
   width: 100%;
 }
 .coming-soon__heading {
-  font-size: 3rem;
   font-weight: 500;
-  text-align: center;
-  font-family: "Cinzel", serif;
 }
-.coming-soon__text-field {
+.coming-soon .text-field {
   width: 100%;
+}
+.coming-soon__btn {
+  width: 100% !important;
 }
 .coming-soon__social-icons {
   width: 100%;
@@ -902,13 +901,12 @@ a {
   justify-content: space-between;
 }
 .coming-soon__social-icon {
-  font-size: 1.5rem !important;
-  opacity: 0.5;
-  transition: all 300ms ease-in-out;
+  font-size: 1.5rem;
+  transition: color 300ms ease-in-out;
+  color: var(--color-dark-grey);
 }
 .coming-soon__social-icon:hover {
-  opacity: 1;
-  color: var(--clr-accent);
+  color: var(--color-primary);
 }
 
 .contact-page__container {
