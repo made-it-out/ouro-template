@@ -1,23 +1,17 @@
-.contact-form{
-    width: 100%;
-    background-color: var(--clr-white);
-    &__container{
-        margin: auto;
+.contact-form {
+
+    &__heading {
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    &__form {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
-    &__heading{
-        font-size: 1.8rem;
-        color: var(--clr-black);
-    }
-    &__form{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem;
-    }
-    &__btn{
+
+    &__submit {
         align-self: flex-end;
     }
 }

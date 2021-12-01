@@ -1,6 +1,6 @@
 @use '../abstracts/'as a;
 
-.contact-page {
+.contact {
     &__container {
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -18,8 +18,8 @@
         margin-bottom: 2rem;
     }
 
-    &__header {
-        font-size: 1.8rem;
+    &__heading {
+        font-weight: 500;
     }
 
     &__list {
@@ -28,12 +28,13 @@
         gap: 1rem;
     }
 
-    &__item {
+    &__list-item {
         display: flex;
+        align-items: center;
         gap: .5rem;
     }
 
     &__icon {
-        color: var(--clr-accent);
+        color: var(--color-primary);
     }
 }
