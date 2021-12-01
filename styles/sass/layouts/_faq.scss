@@ -1,22 +1,22 @@
-.faq{
-    padding: 4rem 0;
+@use '../abstracts/' as a;
 
-    &__subtitle{
-        margin: 2rem auto;
+.faq{
+
+    &__container{
+        padding: 2rem 0;
+
+        @include a.mq-min(768px){
+            padding: 4rem 0;
+        }
+    }
+
+    &__heading{
         text-align: center;
     }
-    .accordion{
-        padding: 0;
-        border: 1px solid var(--clr-light-grey);
 
-        &__item:first-child{
-            border-top: none;
-        }
-        &__item:last-child{
-            border-bottom: none;
-        }
-        &__label{
-            background-color: var(--clr-x-light-grey);
-        }
+    &__column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

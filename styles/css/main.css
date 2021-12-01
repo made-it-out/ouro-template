@@ -953,25 +953,21 @@ a {
   margin: 2rem auto;
 }
 
-.faq {
-  padding: 4rem 0;
+.faq__container {
+  padding: 2rem 0;
 }
-.faq__subtitle {
-  margin: 2rem auto;
+@media only screen and (min-width: 768px) {
+  .faq__container {
+    padding: 4rem 0;
+  }
+}
+.faq__heading {
   text-align: center;
 }
-.faq .accordion {
-  padding: 0;
-  border: 1px solid var(--clr-light-grey);
-}
-.faq .accordion__item:first-child {
-  border-top: none;
-}
-.faq .accordion__item:last-child {
-  border-bottom: none;
-}
-.faq .accordion__label {
-  background-color: var(--clr-x-light-grey);
+.faq__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login {
@@ -1579,7 +1575,7 @@ accordion-component {
 
 .accordion__heading {
   font-weight: 600;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem;
   background-color: var(--color-primary);
   color: var(--color-white);
   position: relative;
