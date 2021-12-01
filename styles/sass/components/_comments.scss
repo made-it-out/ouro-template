@@ -1,0 +1,49 @@
+@use '../abstracts/' as a;
+
+.comments {
+    padding: 2rem 0;
+
+    @include a.mq-min(768px){
+        padding: 4rem 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__count {
+        font-weight: 600;
+    }
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    background-color: var(--color-off-white);
+
+    &__date-and-author {
+        display: flex;
+        gap: 1rem;
+        width: fit-content;
+        border-bottom: 1px solid var(--color-primary);
+    }
+
+    &__date {
+        color: var(--color-dark-grey);
+    }
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    // max-width: 500px;
+
+    &__heading {
+        font-weight: 600;
+    }
+}

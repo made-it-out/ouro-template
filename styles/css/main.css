@@ -3596,6 +3596,51 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   margin: auto;
 }
 
+.comments {
+  padding: 2rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .comments {
+    padding: 4rem 0;
+  }
+}
+.comments__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.comments__count {
+  font-weight: 600;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-off-white);
+}
+.comment__date-and-author {
+  display: flex;
+  gap: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 1px solid var(--color-primary);
+}
+.comment__date {
+  color: var(--color-dark-grey);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.comment-form__heading {
+  font-weight: 600;
+}
+
 body {
   background-color: var(--color-white);
 }
