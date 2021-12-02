@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap-grid.min.css"
+        integrity="sha512-MJjgE48PpWFK4ZQowkReHYVkHv9Rl3ZqdxxdbisYuR0q0qRyVHSNw52YBvc0sqT0qtJFT3dirXdEMtd1l56ZUQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/css/main.css">
+    <title>Ouro Template | Search</title>
+</head>
+
+<body>
+    <!-- Start Header 1 -->
+    <header class="header header--1">
+
+        <a href="/" class="header__logo-container">
+            <img src="/assets/logo-blue-black.png" alt="blue and black logo" class="header__logo header__logo--primary"
+                loading="lazy" />
+            <img src="/assets/logo-blue.png" alt="blue logo" class="header__logo header__logo--secondary"
+                loading="lazy" />
+        </a>
+
+        <nav class="navbar">
+            <div class="navbar__modal"></div>
+
+            <div class="navbar__link">
+                <div class="navbar__menu-name" tabindex="0">
+                    <span>Shop</span>
+                    <i class="fas fa-chevron-down navbar__menu-icon"></i>
+                </div>
+
+                <div class="navbar__submenus navbar__submenus--align-center">
+                    <div class="navbar__submenu">
+                        <a href="/pages/shop/product.html" class="navbar__submenu-name">Product</a>
+                        <a href="/pages/shop/product-on-sale.html" class="navbar__sublink">On Sale</a>
+                        <a href="/pages/shop/product-sold-out.html" class="navbar__sublink">Sold Out</a>
+                    </div>
+
+                    <div class="navbar__submenu">
+                        <a href="/pages/shop/collection.html" class="navbar__sublink">Collection</a>
+                        <a href="/pages/shop/search.html" class="navbar__sublink">Search</a>
+                        <a href="/pages/shop/cart.html" class="navbar__sublink">Cart</a>
+                        <a href="/pages/shop/checkout.html" class="navbar__sublink">Checkout</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar__link">
+                <div class="navbar__menu-name" tabindex="0">
+                    <span>Blog</span>
+                    <i class="fas fa-chevron-down navbar__menu-icon"></i>
+                </div>
+
+                <div class="navbar__submenus navbar__submenus--align-center">
+                    <div class="navbar__submenu">
+                        <a href="/pages/blog/blog.html" class="navbar__sublink">Blog</a>
+                        <a href="/pages/blog/article.html" class="navbar__sublink">Article</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar__link">
+                <div class="navbar__menu-name" tabindex="0">
+                    <span>Pages</span>
+                    <i class="fas fa-chevron-down navbar__menu-icon"></i>
+                </div>
+
+                <div class="navbar__submenus navbar__submenus--align-center">
+                    <div class="navbar__submenu">
+                        <a href="/pages/pages/about.html" class="navbar__sublink">About</a>
+                        <a href="/pages/pages/contact.html" class="navbar__sublink">Contact</a>
+                        <a href="/pages/pages/not-found.html" class="navbar__sublink">404</a>
+                        <a href="/pages/pages/faq.html" class="navbar__sublink">FAQ</a>
+                        <a href="/pages/pages/coming-soon.html" class="navbar__sublink">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar__link">
+                <div class="navbar__menu-name" tabindex="0">
+                    <span>Customer</span>
+                    <i class="fas fa-chevron-down navbar__menu-icon"></i>
+                </div>
+
+                <div class="navbar__submenus navbar__submenus--align-center">
+                    <div class="navbar__submenu">
+                        <a href="/pages/customer/account.html" class="navbar__sublink">Account</a>
+                        <a href="/pages/customer/addresses.html" class="navbar__sublink">Addresses</a>
+                        <a href="/pages/customer/login.html" class="navbar__sublink">Login</a>
+                        <a href="/pages/customer/register.html" class="navbar__sublink">Register</a>
+                        <a href="/pages/customer/reset-password.html" class="navbar__sublink">Reset Password</a>
+                        <a href="/pages/customer/order.html" class="navbar__sublink">Order</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar__link">
+                <div class="navbar__menu-name" tabindex="0">
+                    <span>Elements</span>
+                    <i class="fas fa-chevron-down navbar__menu-icon"></i>
+                </div>
+
+                <div class="navbar__submenus navbar__submenus--align-center">
+                    <div class="navbar__submenu">
+                        <a href="/pages/elements/header-1.html" class="navbar__sublink">Header 1</a>
+                        <a href="/pages/elements/header-2.html" class="navbar__sublink">Header 2</a>
+                        <a href="/pages/elements/header-3.html" class="navbar__sublink">Header 3</a>
+                        <a href="/pages/elements/header-4.html" class="navbar__sublink">Header 4</a>
+                        <a href="/pages/elements/header-5.html" class="navbar__sublink">Header 5</a>
+                        <a href="/pages/elements/header-6.html" class="navbar__sublink">Header 6</a>
+                    </div>
+
+                    <div class="navbar__submenu">
+                        <a href="/pages/elements/accordion.html" class="navbar__sublink">Accordion</a>
+                        <a href="/pages/elements/announcement.html" class="navbar__sublink">Announcement</a>
+                        <a href="/pages/elements/blog-posts.html" class="navbar__sublink">Blog Posts</a>
+                        <a href="/pages/elements/buttons.html" class="navbar__sublink">Buttons</a>
+                        <a href="/pages/elements/collection-list.html" class="navbar__sublink">Collection List</a>
+                        <a href="/pages/elements/featured-product.html" class="navbar__sublink">Featured Product</a>
+                    </div>
+
+                    <div class="navbar__submenu">
+                        <a href="/pages/elements/double-image-banner.html" class="navbar__sublink">Double Image
+                            Banner</a>
+                        <a href="/pages/elements/email-signup.html" class="navbar__sublink">Email Signup</a>
+                        <a href="/pages/elements/footer.html" class="navbar__sublink">Footer</a>
+                        <a href="/pages/elements/image-banner.html" class="navbar__sublink">Image Banner</a>
+                        <a href="/pages/elements/image-with-text.html" class="navbar__sublink">Image With Text</a>
+                    </div>
+
+                    <div class="navbar__submenu">
+                        <a href="/pages/elements/modal.html" class="navbar__sublink">Modal</a>
+                        <a href="/pages/elements/multicolumn.html" class="navbar__sublink">Multicolumn</a>
+                        <a href="/pages/elements/product-grid.html" class="navbar__sublink">Product Grid</a>
+                        <a href="/pages/elements/slideshow.html" class="navbar__sublink">Slideshow</a>
+                        <a href="/pages/elements/testimonials.html" class="navbar__sublink">Testimonials</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="searchbar">
+            <i class="fas fa-search searchbar__icon" tabindex="0" aria-controls="searchbar__input" role="switch"></i>
+            <input type="text" name="searchbar" placeholder="Search" class="searchbar__input" id="searchbar__input"
+                aria-expanded="true" />
+        </div>
+
+        <div class="header__icons">
+            <a href="/pages/customer/account.html"><i class="fas fa-user"></i></a>
+
+            <div class="header__cart">
+                <a href="/pages/shop/cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <div class="header__cart-count">2</div>
+            </div>
+            <i class="fas fa-bars header__toggle" tabIndex="0"></i>
+        </div>
+    </header>
+    <!-- End Header 1 -->
+
+    <!-- Start Search -->
+    <div class="search">
+        <div class="container">
+            <div class="row">
+                <div class="search__top">
+                    <h1 class="search__heading">Search</h1>
+
+                    <div class="search__field text-field">
+                        <input type="text" id="search-input" class="text-field__input" placeholder=""
+                            value="microphone" />
+                        <label for="search-input" class="text-field__label">Search</label>
+                    </div>
+
+                    <p class="search__message">16 results found for &quot;microphone&quot;</p>
+                </div>
+            </div>
+
+            <div class="search__row row">
+                <div class="search__filters-container col-md-4 col-lg-3">
+                    <!-- Start Accordion -->
+                    <accordion-component class="search__filters" data-multiple="true">
+                        <div class="accordion__item">
+                            <h3 class="accordion__heading subheading">Size</h3>
+                            <div class="accordion__content">
+                                <ul class="search__filters-list">
+                                    <li class="search__filter">Small</li>
+                                    <li class="search__filter">Medium</li>
+                                    <li class="search__filter">Large</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <h3 class="accordion__heading subheading">Color</h3>
+                            <div class="accordion__content">
+                                <ul class="search__filters-list">
+                                    <li class="search__filter">Black</li>
+                                    <li class="search__filter">White</li>
+                                    <li class="search__filter">Chrome</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <h3 class="accordion__heading subheading">Sort</h3>
+                            <div class="accordion__content">
+                                <ul class="search__filters-list">
+                                    <li class="search__filter">Featured</li>
+                                    <li class="search__filter">Best Selling</li>
+                                    <li class="search__filter">Alphabetically, A to Z</li>
+                                    <li class="search__filter">Alphabetically, Z to A</li>
+                                    <li class="search__filter">Price, low to high</li>
+                                    <li class="search__filter">Price, high to low</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </accordion-component>
+                    <!-- End Accordion -->
+                </div>
+
+                <div class="search__results col-md-8 col-lg-9">
+                    <!-- Start Product Grid -->
+                    <div class="product-grid">
+                        <div
+                            class="product-grid__grid product-grid__grid--scale-image product-grid__grid--alternate-image row">
+                            <a href="/pages/shop/product-on-sale.html"
+                                class="product-grid__product product-grid__product--on-sale col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-grid__product-badge product-grid__product-badge--on-sale">
+                                    <span class="product-grid__product-badge-text">Sale</span>
+                                </div>
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-2-b.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-2-a.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-compare-price">$299.00</span>
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
+
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-8-a.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-8-c.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/pages/shop/product-sold-out.html"
+                                class="product-grid__product product-grid__product--sold-out col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-grid__product-badge product-grid__product-badge--sold-out">
+                                    <span class="product-grid__product-badge-text">Sold Out</span>
+                                </div>
+
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-6-c.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-6-d.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-3-c.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-3-e.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/pages/shop/product-sold-out.html"
+                                class="product-grid__product product-grid__product--sold-out col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-grid__product-badge product-grid__product-badge--sold-out">
+                                    <span class="product-grid__product-badge-text">Sold Out</span>
+                                </div>
+
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-9-c.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-9-d.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-7-b.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-7-a.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-10-b.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-10-a.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="/pages/shop/product-on-sale.html"
+                                class="product-grid__product product-grid__product--on-sale col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-grid__product-badge product-grid__product-badge--on-sale">
+                                    <span class="product-grid__product-badge-text">Sale</span>
+                                </div>
+                                <div class="product-grid__product-img-container">
+                                    <img src="/assets/mic-5-c.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--primary" />
+                                    <img src="/assets/mic-5-b.png" alt=""
+                                        class="product-grid__product-img product-grid__product-img--secondary" />
+                                </div>
+                                <div class="product-grid__product-info">
+                                    <p class="product-grid__product-vendor small">Vendor</p>
+                                    <span class="product-grid__product-title">Microphone
+                                    </span>
+                                    <div class="product-grid__product-prices">
+                                        <span class="product-grid__product-compare-price">$299.00</span>
+                                        <span class="product-grid__product-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Product Grid -->
+                </div>
+            </div>
+
+            <div class="search__pagination">
+                <span class="search__page-number current-page">1</span>
+                <span class="search__page-number">2</span>
+                <i class="fas fa-chevron-right search__next"></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Search -->
+
+    <!-- Start Email Signup -->
+    <div class="email-signup">
+        <div class="email-signup__container">
+            <h2 class="email-signup__heading subheading">Sign up to our emails</h2>
+
+            <p class="email-signup__body">Promotions, sales, and new products directly to your inbox.</p>
+
+            <div class="email-signup__form">
+                <div class="text-field">
+                    <input type="email" id="email-signup-email" required class="text-field__input" />
+
+                    <label htmlFor="email-signup-email" class="text-field__label">Email</label>
+                </div>
+
+                <button id="email-signup-submit" class="btn btn--primary btn--opacity-decrease">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Subscribe</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <p class="email-signup__message email-signup__message--success">
+                <i class="fas fa-check-circle"></i>
+                Thanks for subscribing
+            </p>
+
+            <p class="email-signup__message email-signup__message--error">
+                <i class="fas fa-exclamation-triangle"></i>
+                Something went wrong. Try again.
+            </p>
+        </div>
+    </div>
+    <!-- End Email Signup -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="footer__links">
+                        <a class="footer__column-title">Shop</a>
+                        <a href="/pages/shop/collection.html" class="footer__link small">Collection</a>
+                        <a href="/pages/shop/product.html" class="footer__link small">Product</a>
+                        <a href="/pages/shop/search.html" class="footer__link small">Search</a>
+                        <a href="/pages/shop/cart.html" class="footer__link small">Cart</a>
+                        <a href="/pages/shop/checkout.html" class="footer__link small">Checkout</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="footer__links">
+                        <a class="footer__column-title">Pages</a>
+                        <a href="/pages/pages/about.html" class="footer__link small">About</a>
+                        <a href="/pages/pages/contact.html" class="footer__link small">Contact</a>
+                        <a href="/pages/pages/not-found.html" class="footer__link small">404</a>
+                        <a href="/pages/pages/faq.html" class="footer__link small">FAQ</a>
+                        <a href="/pages/pages/coming-soon.html" class="footer__link small">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="footer__links">
+                        <a class="footer__column-title">Customer</a>
+                        <a href="/pages/customer/account.html" class="footer__link small">Account</a>
+                        <a href="/pages/customer/addresses.html" class="footer__link small">Addresses</a>
+                        <a href="/pages/customer/login.html" class="footer__link small">Login</a>
+                        <a href="/pages/customer/register.html" class="footer__link small">Register</a>
+                        <a href="/pages/customer/reset-password.html" class="footer__link small">Reset Password</a>
+                        <a href="/pages/customer/order.html" class="footer__link small">Order</a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="footer__extra">
+                        <span class="footer__column-title">Follow Us</span>
+                        <div class="footer__social-icons">
+                            <a href="#" class="footer__social-icon small">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="footer__social-icon small">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="footer__social-icon small">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="footer__social-icon small">
+                                <i class="fab fa-pinterest"></i>
+                                <span>Pinterest</span>
+                            </a>
+                            <a href="#" class="footer__social-icon small">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="#" class="footer__social-icon small">
+                                <i class="fab fa-tiktok"></i>
+                                <span>TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="footer__bottom small">
+                        <div class="footer__copyright">
+                            &copy; <span class="footer__year"></span> Ouro, All Rights Reserved
+                        </div>
+                        <div class="footer__bottom-links">
+                            <a href="#" class="footer__bottom-link">Terms of Service</a>
+                            <a href="#" class="footer__bottom-link">Privacy Policy</a>
+                            <a href="#" class="footer__bottom-link">Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <script src="/js/accordion.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/email-signup.js"></script>
+    <script src="/js/text-field.js"></script>
+    <script src="/js/dynamic-time.js"></script>
+</body>
+
+</html>

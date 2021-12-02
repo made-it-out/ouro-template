@@ -1,0 +1,102 @@
+@use '../abstracts/'as a;
+
+.order-history {
+    &__heading {
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    &__details {
+        margin-bottom: 2rem;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        width: 100%;
+
+        @include a.mq-min(768px) {
+            border: 1px solid var(--color-mid-grey);
+        }
+    }
+
+    &__head {
+        background-color: var(--color-off-white);
+        display: none;
+
+        @include a.mq-min(768px) {
+            display: table-header-group;
+        }
+    }
+
+    &__header {
+        font-weight: 600;
+    }
+
+    &__header,
+    &__cell {
+        padding: 1rem;
+    }
+
+    &__order {
+        display: flex;
+        flex-direction: column;
+
+        @include a.mq-min(768px) {
+            display: table-row;
+        }
+    }
+
+    &__cell {
+        display: flex;
+        justify-content: space-between;
+
+        @include a.mq-min(768px) {
+            display: table-cell;
+        }
+    }
+
+    &__key {
+        font-weight: 600;
+
+        @include a.mq-min(768px) {
+            display: none;
+        }
+    }
+
+    &__value {
+        text-align: right;
+    }
+
+    &__headers {
+        border-bottom: 1px solid var(--color-mid-grey);
+        ;
+    }
+
+    &__header:nth-child(1),
+    &__order .order-history__cell:nth-child(1) {
+        @include a.mq-min(768px) {
+            text-align: left;
+        }
+    }
+
+    &__header:not(:nth-child(1)),
+    &__order .order-history__cell:not(:nth-child(1)) {
+        @include a.mq-min(768px) {
+            text-align: right;
+        }
+    }
+
+    &__order {
+        border-bottom: 1px solid var(--color-mid-grey);
+        ;
+
+        &:nth-child(1) {
+            border-top: 1px solid var(--color-mid-grey);
+            ;
+        }
+
+        .order-history__cell:nth-child(1) .order-history__value {
+            text-decoration: underline;
+        }
+    }
+}

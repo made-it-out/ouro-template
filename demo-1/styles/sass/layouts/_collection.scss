@@ -1,0 +1,37 @@
+@use '../abstracts/'as a;
+
+.collection {
+    padding-bottom: 2rem;
+
+    @include a.mq-min(768px) {
+        padding-bottom: 4rem;
+    }
+
+    &__banner {
+        background-color: var(--color-off-white);
+        padding: 2rem 0;
+
+        @include a.mq-min(768px) {
+            padding: 4rem 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+
+    &__img-container {
+        height: 200px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}

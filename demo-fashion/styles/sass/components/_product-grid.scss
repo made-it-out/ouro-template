@@ -1,0 +1,125 @@
+@use '../abstracts/' as a;
+
+.product-grid {
+    padding: 2rem 0;
+
+    @include a.mq-min(768px){
+        padding: 4rem 0;
+    }
+
+    &__title {
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    &__grid {
+
+        &--scale-image .product-grid__product-img-container:hover .product-grid__product-img {
+            transform: scale(1.06);
+        }
+
+        &--alternate-image .product-grid__product-img-container:hover {
+            .product-grid__product-img--primary {
+                opacity: 0;
+            }
+
+            .product-grid__product-img--secondary {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__product {
+        text-decoration: none;
+        margin-bottom: 1rem;
+
+        &--on-sale,
+        &--sold-out {
+            position: relative;
+        }
+
+        &--sold-out {
+            .product-grid__product-img-container {
+                opacity: .5;
+            }
+        }
+    }
+
+    &__product-badge {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        padding: .5em .8em;
+        border-radius: 3px;
+        box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.23);
+        color: var(--color-white);
+        z-index: 1;
+
+        &--on-sale {
+            @extend .product-grid__product-badge;
+            background-color: var(--color-sale);
+        }
+
+        &--sold-out {
+            @extend .product-grid__product-badge;
+            background-color: var(--color-sold-out);
+        }
+    }
+
+    &__product-img-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding-bottom: 100%;
+    }
+
+    &__product-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transition: all 500ms ease-in-out;
+
+        &--primary {
+            opacity: 1;
+        }
+
+        &--secondary {
+            opacity: 0;
+        }
+    }
+
+    &__product-info {
+        margin-top: .5rem;
+    }
+
+    &__product-vendor {
+        margin-bottom: .2rem;
+        color: var(--color-dark-grey);
+    }
+
+    &__product-prices {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: .5rem;
+    }
+
+    &__product-compare-price {
+        text-decoration: line-through;
+        margin-right: 1rem;
+    }
+
+    &__product-price {
+        letter-spacing: .1rem;
+        font-weight: 600;
+    }
+
+    &__product-compare-price+&__product-price {
+        color: var(--color-sale);
+    }
+}

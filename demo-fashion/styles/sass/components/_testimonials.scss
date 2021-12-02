@@ -1,0 +1,117 @@
+@use '../abstracts/'as a;
+
+.testimonials {
+    background-color: var(--color-light-grey);
+    padding: 2rem 0;
+    overflow-x: hidden;
+
+    @include a.mq-min(768px) {
+        padding: 4rem 0;
+    }
+
+    &__heading {
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__slider {
+        width: min(100vw, 550px);
+        margin: 2rem auto;
+        max-height: 500px;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    &__slide {
+        flex-shrink: 0;
+        position: relative;
+        width: min(90vw, 500px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        border-radius: 5px;
+        text-align: center;
+        transition: transform 400ms ease-in-out, background-color 250ms ease-in-out;
+
+        &--active {
+            background-color: var(--color-white);
+            box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.3);
+
+            .testimonials__author,
+            .testimonials__quote {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__quotation-mark {
+        color: var(--color-light-grey);
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        z-index: -1;
+    }
+
+    &__img-container {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: .5rem;
+
+        i {
+            color: #ffec63;
+        }
+    }
+
+    &__author {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        opacity: .6;
+    }
+
+    &__quote {
+        opacity: .6;
+    }
+
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__previous,
+    &__next {
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: background-color 400ms ease-in-out;
+
+        &--active {
+            cursor: pointer;
+            color: var(--color-white);
+            background-color: var(--color-primary);
+        }
+    }
+}

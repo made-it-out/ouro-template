@@ -1,0 +1,27 @@
+@use '../abstracts/'as a;
+
+.addresses {
+    padding: 2rem 0;
+
+    @include a.mq-min(768px) {
+        padding: 4rem 0;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        font-weight: 600;
+    }
+
+    &__address-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}

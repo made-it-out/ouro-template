@@ -1,0 +1,48 @@
+.email-signup{
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/1003124/pexels-photo-1003124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__container{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        background-color: rgba(0,0,0,0.5);
+    }
+    &__heading{
+        text-align: center;
+        color: var(--color-white);
+        font-weight: 600;
+    }
+    &__body{
+        text-align: center;
+        color: var(--color-white);
+    }
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 1rem;
+        justify-content: center;
+    }
+    &__message{
+        margin-top: .5rem;
+        display: none;
+
+        &--success{
+            color: var(--color-success);
+        }
+        &--error{
+            color: var(--color-error);
+        }
+
+        &--show{
+            display: block;
+        }
+    }
+}
