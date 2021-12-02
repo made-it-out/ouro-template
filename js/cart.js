@@ -15,21 +15,24 @@ function init() {
             let removeBtn = product.querySelector('.cart__product-remove-btn');
 
 
-            // Quantity
+            // Increment quantity on plus click and update total
             qtyPlus.addEventListener('click', () => {
                 qtyIncrement();
                 updateSubtotal();
             })
+            // Increment quantity on plus keydown and update total
             qtyPlus.addEventListener('keydown', (event) => {
                 if (event.keyCode === 13 || event.keyCode === 32) {
                     qtyIncrement();
                     updateSubtotal();
                 }
             })
+            // Decrement quantity on minus click and update total
             qtyMinus.addEventListener('click', () => {
                 qtyDecrement();
                 updateSubtotal();
             });
+            // Decrement quantity on minus keydown and update total
             qtyMinus.addEventListener('keydown', (event) => {
                 if (event.keyCode === 13 || event.keyCode === 32) {
                     qtyDecrement();
@@ -48,11 +51,12 @@ function init() {
                 }
             }
 
-            // Remove Button
+            // Remove product on click
             removeBtn.addEventListener('click', () => {
                 removeProduct(product);
                 updateSubtotal();
             });
+            // Remove product on keydown
             removeBtn.addEventListener('keydown', (event) => {
                 if (event.keyCode === 13 || event.keyCode === 32) {
                     removeProduct(product);
@@ -66,6 +70,8 @@ function init() {
             }
         })
     }
+
+    // Updates the subtotal based on quantity change or product removal
     function updateSubtotal() {
         let totals = Array.from(document.querySelectorAll('.cart__product-price-total'));
 

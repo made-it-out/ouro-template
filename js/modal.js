@@ -6,19 +6,23 @@ function init() {
     const overlay = modal.querySelector('.modal__overlay');
     let modalShown = false;
 
+    // close modal on button click/keydown
     closeBtn.addEventListener('click', closeModal);
     closeBtn.addEventListener('keydown', (e) => {
         if (e.keyCode === 13 || e.keyCode === 32) {
             closeModal();
         }
     });
+
+    // close modal if clicked outside
     overlay.addEventListener('click', closeModal);
-    // close modal functions
+    
     function closeModal() {
         modal.remove()
         document.body.classList.remove('body--modal-open');
     }
 
+    // close modal on esc keydown
     function escBtnKeyDown(e) {
         if (e.keyCode === 27) {
             closeModal();

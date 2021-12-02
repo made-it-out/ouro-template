@@ -38,6 +38,7 @@ function init() {
         imgAlternates[index].classList.add('product__img-alternate--active');
     }
 
+    // change slide when its indicator is clicked/focus keydown
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', (event) => changeIndex(index));
         indicator.addEventListener('keydown', (event) => {
@@ -47,6 +48,7 @@ function init() {
         });
     })
 
+    // change slide when its alternate image is clicked/focus keydown
     imgAlternates.forEach((imgAlternate, index) => {
         imgAlternate.addEventListener('click', (event) => changeIndex(index));
         imgAlternate.addEventListener('keydown', (event) => {
@@ -56,13 +58,14 @@ function init() {
         });
     })
 
-    // Quantity
+    // Increment quantity on plus click/keydown
     qtyPlus.addEventListener('click', qtyIncrement)
     qtyPlus.addEventListener('keydown', (event) => {
         if (event.keyCode === 13 || event.keyCode === 32) {
             qtyIncrement();
         }
     })
+    // Decrement quantity on plus click/keydown
     qtyMinus.addEventListener('click', qtyDecrement);
     qtyMinus.addEventListener('keydown', (event) => {
         if (event.keyCode === 13 || event.keyCode === 32) {

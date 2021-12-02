@@ -6,6 +6,7 @@ function init(){
     const messageSuccess = document.querySelector('.email-signup__message--success');
     const messageError = document.querySelector('.email-signup__message--error');
 
+    // On click/keydown, show a message after the submit button is pressed based on if the input has a length
     emailSubmit.addEventListener('click', emailSignupSubmit);
     emailSubmit.addEventListener('keydown', (event) => {
         if(event.keyCode === 13 || event.keyCode === 32){

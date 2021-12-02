@@ -14,6 +14,7 @@ function init() {
 
     let activeIndex = null;
 
+    // toggle submenus on click/focus keydown
     navbarMenuNames.forEach((menuName, index) => {
         menuName.addEventListener('click', () => toggleMenuName(index));
         menuName.addEventListener('keydown', (e) => {
@@ -24,6 +25,7 @@ function init() {
     });
 
 
+    // close submenu
     function closeMenuName(index) {
         if (index !== null) {
             navbarMenuNames[index].classList.remove('navbar__menu-name--open');
@@ -34,6 +36,7 @@ function init() {
         }
     }
 
+    // open submenu
     function openMenuName(index) {
         navbarMenuNames[index].classList.add('navbar__menu-name--open');
 
@@ -55,6 +58,7 @@ function init() {
         }
     }
 
+    // close any open menu when clicked
     navbarModal.addEventListener('click', () => {
         closeMenuName(activeIndex);
     })
@@ -64,6 +68,7 @@ function init() {
     searchbarInput.addEventListener('focus', searchbarFocus);
     searchbarInput.addEventListener('blur', searchbarBlur);
 
+    // toggle searchbar on click/focused keydown
     searchbarIcon.addEventListener('click', toggleSearchbar);
     searchbarIcon.addEventListener('keydown', (e) => {
         if(e.keyCode === 13 || e.keyCode === 32){
@@ -71,6 +76,7 @@ function init() {
         }
     });
 
+    // change searchbar icon if it has length
     function searchbarChange(e) {
         if (searchbarInput.value.length > 0) {
             searchbarIcon.classList.remove('fa-search');
@@ -81,6 +87,7 @@ function init() {
             searchbarIcon.classList.remove('fa-times');
         }
     }
+
 
     function searchbarFocus(e) {
         if (searchbar.classList.contains('searchbar--expanded')) {
@@ -110,6 +117,7 @@ function init() {
         }
     }
 
+    // toggle navbar on small screens when hamburger is clicked/focus keydown
     headerToggle.addEventListener('click', toggleNavbar)
     headerToggle.addEventListener('keydown', (e) => {
         if(e.keyCode === 13 || e.keyCode === 32){
@@ -124,7 +132,7 @@ function init() {
         closeMenuName(activeIndex);
     }
 
-    //if resized from small to larger screen
+    //if resized from small to larger screen - close navbar and remove classes to navbar, header, and body
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 1024) {
             navbar.classList.remove('navbar--shown');
