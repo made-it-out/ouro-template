@@ -1,29 +1,9 @@
 @use '../abstracts/' as a;
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.bn{
-    font-family: 'Bebas Neue', cursive;
-}
-.c{
-    font-family: 'Comfortaa', cursive;
-}
-.ri{
-    font-family: 'Righteous', cursive;
-}
-.cin{
-    font-family: 'Cinzel', serif;
-}
-.pop{
-    font-family: 'Poppins', sans-serif;
-}
-
 :root{
-    // --font-family-xl-heading: 'Cinzel', serif;
     --font-family-xl-heading: 'Righteous', cursive;
     --font-family-heading: 'Poppins', sans-serif;
     --font-family-subheading: 'Poppins', sans-serif;
