@@ -1,1 +1,0 @@
-For documentation of Ouro Template, go to https://ouro-docs.netlify.app/
