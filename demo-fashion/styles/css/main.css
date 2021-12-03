@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *,
 *::before,
@@ -39,27 +36,6 @@ a {
   --color-sold-out: #cccccc;
   --color-success: #37bb7c;
   --color-error: #c50f0f;
-  --shadow-bottom: 0px 6px 2px 0px rgba(0,0,0,0.25);
-}
-
-.bn {
-  font-family: "Bebas Neue", cursive;
-}
-
-.c {
-  font-family: "Comfortaa", cursive;
-}
-
-.ri {
-  font-family: "Righteous", cursive;
-}
-
-.cin {
-  font-family: "Cinzel", serif;
-}
-
-.pop {
-  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -287,8 +263,8 @@ a {
   max-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center bottom;
-     object-position: center bottom;
+  -o-object-position: center 30%;
+     object-position: center 30%;
 }
 .article__content .subheading {
   font-weight: 600;
@@ -312,6 +288,9 @@ a {
 }
 .article__return-btn {
   margin: auto;
+}
+.article .blog-posts {
+  background-color: var(--color-off-white);
 }
 
 .blog {
@@ -1809,6 +1788,60 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
     overflow-y: unset;
   }
 }
+.header--transparent {
+  background-color: transparent;
+  position: absolute;
+  box-shadow: none;
+  color: var(--color-white);
+}
+.header--transparent + .slideshow {
+  background-color: var(--color-black);
+}
+.header--transparent .searchbar {
+  padding-right: 0.5rem;
+  background-color: transparent;
+  border-color: var(--color-white);
+}
+.header--transparent .searchbar--expanded {
+  padding-right: 1rem;
+}
+.header--transparent .searchbar--expanded .searchbar__input {
+  padding: 0 2rem 0 1rem;
+}
+.header--transparent .searchbar--expanded.searchbar--border {
+  border-color: var(--color-white);
+}
+.header--transparent .searchbar__input {
+  background-color: transparent;
+  padding: 0;
+  color: var(--color-white);
+}
+.header--transparent .searchbar__input::-moz-placeholder {
+  color: var(--color-light-grey);
+}
+.header--transparent .searchbar__input:-ms-input-placeholder {
+  color: var(--color-light-grey);
+}
+.header--transparent .searchbar__input::placeholder {
+  color: var(--color-light-grey);
+}
+.header--transparent .searchbar__icon {
+  position: unset;
+}
+.header--transparent.header--navbar-shown {
+  background-color: var(--color-black);
+}
+.header--transparent.header--navbar-shown .navbar__submenus {
+  background-color: transparent;
+}
+.header--transparent .navbar {
+  background-color: transparent;
+}
+@media only screen and (min-width: 1024px) {
+  .header--transparent .navbar__submenus {
+    color: var(--color-black);
+  }
+}
 .header--1, .header--2, .header--3, .header--4, .header--5 .header__container, .header--6 {
   display: grid;
   grid-template-areas: "header-logo searchbar header-icons" "navbar navbar navbar";
@@ -2339,7 +2372,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
   padding: 0.5em 0.8em;
   border-radius: 3px;
   box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.23);
-  z-index: 2;
+  z-index: 1;
 }
 .featured-product__badge--on-sale {
   background-color: var(--color-sale);
@@ -2944,7 +2977,7 @@ accordion-component.ready .accordion__item.active .accordion__heading::after {
 
 .email-signup {
   width: 100%;
-  background-image: url("https://images.pexels.com/photos/1003124/pexels-photo-1003124.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("https://images.pexels.com/photos/605494/pexels-photo-605494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

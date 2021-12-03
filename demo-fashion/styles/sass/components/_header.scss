@@ -18,10 +18,71 @@
         height: 100vh;
         overflow-y: auto;
 
-        @include a.mq-min(1025px){
+        @include a.mq-min(1025px) {
             position: relative;
             height: auto;
             overflow-y: unset;
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+        position: absolute;
+        box-shadow: none;
+        color: var(--color-white);
+
+        &+.slideshow {
+            background-color: var(--color-black);
+        }
+
+        .searchbar {
+            padding-right: .5rem;
+            background-color: transparent;
+            border-color: var(--color-white);
+
+            &--expanded {
+                padding-right: 1rem;
+
+                .searchbar__input {
+                    padding: 0 2rem 0 1rem;
+                }
+
+                &.searchbar--border {
+                    border-color: var(--color-white);
+                }
+            }
+
+            &__input {
+                background-color: transparent;
+                padding: 0;
+                color: var(--color-white);
+
+                &::placeholder {
+                    color: var(--color-light-grey);
+                }
+            }
+
+            &__icon {
+                position: unset;
+            }
+        }
+
+        &.header--navbar-shown{
+            background-color: var(--color-black);
+
+            
+            .navbar__submenus{
+                background-color: transparent;
+            }
+        }
+        .navbar{
+            background-color: transparent;
+        }
+
+        @include a.mq-min(1024px){
+            .navbar__submenus{
+                color: var(--color-black);
+            }
         }
     }
 
@@ -41,7 +102,8 @@
         @include a.mq-min(400px) {
             grid-template-columns: auto 1fr auto;
         }
-        @include a.mq-min(1025px){
+
+        @include a.mq-min(1025px) {
             align-items: center;
         }
     }
@@ -198,11 +260,13 @@
         max-width: 150px;
         position: relative;
         align-self: center;
-        &:hover{
-            .header__logo--primary{
+
+        &:hover {
+            .header__logo--primary {
                 opacity: 0;
             }
-            .header__logo--secondary{
+
+            .header__logo--secondary {
                 opacity: 1;
             }
         }
@@ -215,18 +279,19 @@
         object-position: center;
         transition: opacity 200ms ease-out;
 
-        &--primary{
+        &--primary {
             position: relative;
             opacity: 1;
         }
-        &--secondary{
+
+        &--secondary {
             opacity: 0;
             position: absolute;
             left: 0;
             top: 0;
         }
 
-        &:hover{}
+        &:hover {}
     }
 
     &__icons {
@@ -392,6 +457,7 @@
         &--align-center .navbar__submenu {
             align-items: center;
             text-align: center;
+
             @include a.mq-min(1025px) {
                 text-align: left;
             }

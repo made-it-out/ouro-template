@@ -21,10 +21,8 @@
     <header class="header header--1">
 
         <a href="/" class="header__logo-container">
-            <img src="/assets/logo-blue-black.png" alt="blue and black logo" class="header__logo header__logo--primary"
-                loading="lazy" />
-            <img src="/assets/logo-blue.png" alt="blue logo" class="header__logo header__logo--secondary"
-                loading="lazy" />
+            <img src="/assets/logo-blue-black.png" class="header__logo header__logo--primary" loading="lazy" />
+            <img src="/assets/logo-blue.png" class="header__logo header__logo--secondary" loading="lazy" />
         </a>
 
         <nav class="navbar">
@@ -169,15 +167,15 @@
         <div class="container">
             <div class="row">
                 <div class="search__top">
-                    <h1 class="search__heading">Search</h1>
+                    <h1 class="search__heading heading">Search</h1>
 
                     <div class="search__field text-field">
                         <input type="text" id="search-input" class="text-field__input" placeholder=""
-                            value="microphone" />
+                            value="cozy" />
                         <label for="search-input" class="text-field__label">Search</label>
                     </div>
 
-                    <p class="search__message">16 results found for &quot;microphone&quot;</p>
+                    <p class="search__message">16 results found for &quot;cozy&quot;</p>
                 </div>
             </div>
 
@@ -185,7 +183,7 @@
                 <div class="search__filters-container col-md-4 col-lg-3">
                     <!-- Start Accordion -->
                     <accordion-component class="search__filters" data-multiple="true">
-                        <div class="accordion__item">
+                        <div class="accordion__item" data-open-by-default="true">
                             <h3 class="accordion__heading subheading">Size</h3>
                             <div class="accordion__content">
                                 <ul class="search__filters-list">
@@ -202,7 +200,8 @@
                                 <ul class="search__filters-list">
                                     <li class="search__filter">Black</li>
                                     <li class="search__filter">White</li>
-                                    <li class="search__filter">Chrome</li>
+                                    <li class="search__filter">Blue</li>
+                                    <li class="search__filter">Brown</li>
                                 </ul>
                             </div>
                         </div>
@@ -227,170 +226,176 @@
                 <div class="search__results col-md-8 col-lg-9">
                     <!-- Start Product Grid -->
                     <div class="product-grid">
-                        <div
-                            class="product-grid__grid product-grid__grid--scale-image product-grid__grid--alternate-image row">
-                            <a href="/pages/shop/product-on-sale.html"
-                                class="product-grid__product product-grid__product--on-sale col-sm-6 col-md-4 col-lg-3">
-                                <div class="product-grid__product-badge product-grid__product-badge--on-sale">
-                                    <span class="product-grid__product-badge-text">Sale</span>
-                                </div>
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-2-b.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-2-a.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-compare-price">$299.00</span>
-                                        <span class="product-grid__product-price">$99.00</span>
+                        <div class="container">
+                            <div
+                                class="product-grid__grid product-grid__grid--scale-image product-grid__grid--alternate-image row">
+                                <a href="/pages/shop/product-on-sale.html"
+                                    class="product-grid__product product-grid__product--on-sale col-sm-6 col-md-4 col-lg-3">
+                                    <div class="product-grid__product-badge product-grid__product-badge--on-sale">
+                                        <span class="product-grid__product-badge-text">Sale</span>
                                     </div>
-                                </div>
-                            </a>
-
-                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
-
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-8-a.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-8-c.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
-
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-price">$99.00</span>
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/2-piece-black.jpg"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/2-piece-white.jpg"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
                                     </div>
-                                </div>
-                            </a>
-
-                            <a href="/pages/shop/product-sold-out.html"
-                                class="product-grid__product product-grid__product--sold-out col-sm-6 col-md-4 col-lg-3">
-                                <div class="product-grid__product-badge product-grid__product-badge--sold-out">
-                                    <span class="product-grid__product-badge-text">Sold Out</span>
-                                </div>
-
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-6-c.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-6-d.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
-
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-price">$99.00</span>
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">Wayne</p>
+                                        <span class="product-grid__product-title">2 Piece Sweats
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-compare-price">$129.00</span>
+                                            <span class="product-grid__product-price">$99.00</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
 
-                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-3-c.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-3-e.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
+                                <a href="/pages/shop/product.html"
+                                    class="product-grid__product col-sm-6 col-md-4 col-lg-3">
 
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-price">$99.00</span>
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/turtleneck.jpeg"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/blonde-turtleneck.jpeg"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
                                     </div>
-                                </div>
-                            </a>
 
-                            <a href="/pages/shop/product-sold-out.html"
-                                class="product-grid__product product-grid__product--sold-out col-sm-6 col-md-4 col-lg-3">
-                                <div class="product-grid__product-badge product-grid__product-badge--sold-out">
-                                    <span class="product-grid__product-badge-text">Sold Out</span>
-                                </div>
-
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-9-c.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-9-d.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
-
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-price">$99.00</span>
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">FRNKLN</p>
+                                        <span class="product-grid__product-title">Turtleneck
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-price">$40.00</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
 
-                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-7-b.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-7-a.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
-
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-price">$99.00</span>
+                                <a href="/pages/shop/product-sold-out.html"
+                                    class="product-grid__product product-grid__product--sold-out col-sm-6 col-md-4 col-lg-3">
+                                    <div class="product-grid__product-badge product-grid__product-badge--sold-out">
+                                        <span class="product-grid__product-badge-text">Sold Out</span>
                                     </div>
-                                </div>
-                            </a>
 
-                            <a href="/pages/shop/product.html" class="product-grid__product col-sm-6 col-md-4 col-lg-3">
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-10-b.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-10-a.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
-
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-price">$99.00</span>
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/joggers-black.jpg"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/joggers-navy.png"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
                                     </div>
-                                </div>
-                            </a>
 
-                            <a href="/pages/shop/product-on-sale.html"
-                                class="product-grid__product product-grid__product--on-sale col-sm-6 col-md-4 col-lg-3">
-                                <div class="product-grid__product-badge product-grid__product-badge--on-sale">
-                                    <span class="product-grid__product-badge-text">Sale</span>
-                                </div>
-                                <div class="product-grid__product-img-container">
-                                    <img src="/assets/mic-5-c.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--primary" />
-                                    <img src="/assets/mic-5-b.png" alt=""
-                                        class="product-grid__product-img product-grid__product-img--secondary" />
-                                </div>
-                                <div class="product-grid__product-info">
-                                    <p class="product-grid__product-vendor small">Vendor</p>
-                                    <span class="product-grid__product-title">Microphone
-                                    </span>
-                                    <div class="product-grid__product-prices">
-                                        <span class="product-grid__product-compare-price">$299.00</span>
-                                        <span class="product-grid__product-price">$99.00</span>
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">KDR</p>
+                                        <span class="product-grid__product-title">Sweatpants
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-price">$24.00</span>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+
+                                <a href="/pages/shop/product.html"
+                                    class="product-grid__product col-sm-6 col-md-4 col-lg-3">
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/gradient-sweatshirt-blue.jpg"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/gradient-sweatshirt-orange.jpg"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
+                                    </div>
+
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">Vishunaree</p>
+                                        <span class="product-grid__product-title">Gradient Sweatshirt
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-price">$49.00</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="/pages/shop/product-sold-out.html"
+                                    class="product-grid__product product-grid__product--sold-out col-sm-6 col-md-4 col-lg-3">
+                                    <div class="product-grid__product-badge product-grid__product-badge--sold-out">
+                                        <span class="product-grid__product-badge-text">Sold Out</span>
+                                    </div>
+
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/bomber-hat-brown-1.png"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/bomber-hat-grey.jpg"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
+                                    </div>
+
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">Cold Folks</p>
+                                        <span class="product-grid__product-title">Bomber Hat
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-price">$29.00</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="/pages/shop/product.html"
+                                    class="product-grid__product col-sm-6 col-md-4 col-lg-3">
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/white-coat.jpg"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/woman-green-shirt-jeans.jpeg"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
+                                    </div>
+
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">Newtron</p>
+                                        <span class="product-grid__product-title">Fur Jacket
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-price">$79.00</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="/pages/shop/product.html"
+                                    class="product-grid__product col-sm-6 col-md-4 col-lg-3">
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/hoodie-off-white.jpg"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/hoodie-light-blue.jpg"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
+                                    </div>
+
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">FilledIn</p>
+                                        <span class="product-grid__product-title">Hoodie
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-price">$28.00</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="/pages/shop/product-on-sale.html"
+                                    class="product-grid__product product-grid__product--on-sale col-sm-6 col-md-4 col-lg-3">
+                                    <div class="product-grid__product-badge product-grid__product-badge--on-sale">
+                                        <span class="product-grid__product-badge-text">Sale</span>
+                                    </div>
+                                    <div class="product-grid__product-img-container">
+                                        <img src="/assets/knit-dress-black.png"
+                                            class="product-grid__product-img product-grid__product-img--primary" />
+                                        <img src="/assets/knit-dress-grey.png"
+                                            class="product-grid__product-img product-grid__product-img--secondary" />
+                                    </div>
+                                    <div class="product-grid__product-info">
+                                        <p class="product-grid__product-vendor small">Newtron</p>
+                                        <span class="product-grid__product-title">Knit Dress
+                                        </span>
+                                        <div class="product-grid__product-prices">
+                                            <span class="product-grid__product-compare-price">$99.00</span>
+                                            <span class="product-grid__product-price">$39.00</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <!-- End Product Grid -->
