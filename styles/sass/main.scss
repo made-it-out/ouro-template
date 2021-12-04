@@ -1,0 +1,19 @@
+@use './abstracts';
+@use './base';
+@use './layouts';
+@use './components';
+
+
+
+
+body {
+  background-color: var(--color-white);
+
+  &.body {
+    &--modal-open,
+    &--navbar-shown {
+      overflow-y: hidden;
+      position: fixed;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use '../abstracts/' as a;
+
+.not-found{
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+
+    @include a.mq-min(768px){
+        padding: 4rem 2rem;
+    }
+
+    &__heading{
+        color: var(--color-primary);
+    }
+}
